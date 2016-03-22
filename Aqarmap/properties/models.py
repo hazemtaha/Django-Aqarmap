@@ -35,6 +35,6 @@ class Properties(TimeStampedModel):
     owner = models.ForeignKey(User)
 
 
-class Prop_Photos(models.Model):
+class PropertiesPhotos(models.Model):
     prop_photo = models.ImageField()
     prop = models.ForeignKey(Properties, on_delete=models.CASCADE)
