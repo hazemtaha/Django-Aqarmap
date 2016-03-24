@@ -20,5 +20,5 @@ from properties import urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^hello/', include('properties.urls')),
+    url(r'^index/', include('properties.urls')),
 ]

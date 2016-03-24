@@ -63,7 +63,9 @@ ROOT_URLCONF = 'Aqarmap.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+                'Aqarmap/properties/templates'
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
