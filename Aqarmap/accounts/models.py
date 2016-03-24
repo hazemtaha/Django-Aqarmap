@@ -22,15 +22,13 @@ class UserProfile(models.Model):
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     # update this field with choices field or auto generated countries
     country = models.CharField(max_length=50)
-    default_currency = models.CharField(
-        max_length=50)  # update this field like above
+    default_currency = models.CharField(max_length=50)  # update this field like above
     phone_number = models.CharField(max_length=11)
     account_type = models.CharField(max_length=2, choices=ACCOUNT_TYPES)
     image = models.ImageField()
     points = models.IntegerField()
     social_media = models.BooleanField(default=False)
-    messages = models.ManyToManyField(
-        'self', through='UserMessages', symmetrical=False)
+    messages = models.ManyToManyField('self', through='UserMessages', symmetrical=False)
 
 
 class UserMessages(models.Model):

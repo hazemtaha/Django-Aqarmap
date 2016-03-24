@@ -88,7 +88,7 @@ DATABASES = {
         'NAME': 'django_aqarmap',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': 'iti',
+        'PASSWORD': '0160',
     }
 }
 
@@ -116,8 +116,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
+#setting my time zone Eastern European Time
+TIME_ZONE = 'EET'
 
 USE_I18N = True
 

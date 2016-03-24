@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
 from model_utils.models import TimeStampedModel
+#This abstract base class just provides self-updating created and modified fields on any model that inherits from it.
 # Create your models here.
 
 PROPERTIES_TYPES = (
