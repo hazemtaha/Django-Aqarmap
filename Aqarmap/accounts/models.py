@@ -14,6 +14,16 @@ ACCOUNT_TYPES = (
     ('B', 'Broker'),
     ('RC', 'Real Estate Company'),
 )
+CURRENCY = (
+    ('EGP', 'EGP'),
+    ('USD', 'USD'),
+)
+
+
+def upload_location(instace, filename):
+    ProfileModel = instace.__class__
+    new_id = ProfileModel.objects.order_by('id').last().id + 1
+    return "%s/%s" % (new_id, filename)
 
 
 class UserProfile(models.Model):
@@ -23,14 +33,20 @@ class UserProfile(models.Model):
     # update this field with choices field or auto generated countries
     country = models.CharField(max_length=50)
     default_currency = models.CharField(
-        max_length=50)  # update this field like above
+        max_length=3, choices=CURRENCY)  # update this field like above
     phone_number = models.CharField(max_length=11)
     account_type = models.CharField(max_length=2, choices=ACCOUNT_TYPES)
-    image = models.ImageField()
-    points = models.IntegerField()
+    image = models.ImageField(upload_to=upload_location,
+                              null=True, blank=True, width_field="img_width", height_field="img_height")
+    img_height = models.IntegerField(default=0)
+    img_width = models.IntegerField(default=0)
+    points = models.IntegerField(default=100)
     social_media = models.BooleanField(default=False)
     messages = models.ManyToManyField(
         'self', through='UserMessages', symmetrical=False)
+
+    def __str__(self):
+        return self.user.username
 
 
 class UserMessages(models.Model):
