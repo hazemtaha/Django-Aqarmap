@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'properties.apps.PropertiesConfig',
     'search.apps.SearchConfig',
     'user_settings.apps.UserSettingsConfig',
+    # before adding this app you have to install it's package from here pip
+    # install django-geoposition
+    'geoposition',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -88,7 +91,7 @@ DATABASES = {
         'NAME': 'django_aqarmap',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': 'iti',
+        'PASSWORD': '0160',
     }
 }
 
@@ -116,8 +119,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
+# setting my time zone Eastern European Time
+TIME_ZONE = 'EET'
 
 USE_I18N = True
 
@@ -136,3 +139,8 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'global_static')
 
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'global_media')
+
+# for GeoPositioning on the map
+GEOPOSITION_MARKER_OPTIONS = {
+    'cursor': 'move'
+}
