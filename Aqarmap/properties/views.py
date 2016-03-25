@@ -19,6 +19,7 @@ def details(request, prop_id):
 	except:
 		raise Http404("details dosen't exist anymore")
 
+
 #add another view as a test
 def addProperty(request, addProperty_id):
 	#creating Form View

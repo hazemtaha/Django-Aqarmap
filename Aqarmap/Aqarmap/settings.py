@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'properties.apps.PropertiesConfig',
     'search.apps.SearchConfig',
     'user_settings.apps.UserSettingsConfig',
+    #before adding this app you have to install it's package from here pip install django-geoposition
+    'geoposition',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -132,3 +134,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#for GeoPositioning on the map
+GEOPOSITION_MARKER_OPTIONS = {
+     'cursor': 'move'
+}
