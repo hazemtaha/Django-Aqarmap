@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# email configuration
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
 
 # Application definition
 
@@ -35,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts.apps.AccountsConfig',
@@ -48,8 +52,15 @@ INSTALLED_APPS = [
     # before adding this app you have to install it's package from here pip
     # install django-geoposition
     'geoposition',
+    # social media
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.twitter',
 ]
-
+# django-allauth
+SITE_ID = 2
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -74,6 +85,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
             ],
         },
     },
@@ -113,7 +125,17 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+# django-allauth related
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
 
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+# django-allauth custom signup form
+ACCOUNT_SIGNUP_FORM_CLASS = 'accounts.forms.RegisterationForm'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
@@ -144,3 +166,23 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'global_media')
 GEOPOSITION_MARKER_OPTIONS = {
     'cursor': 'move'
 }
+
+# sets the default user model to custom made one
+AUTH_USER_MODEL = "accounts.UserProfile"
+
+SOCIALACCOUNT_PROVIDERS = \
+    {'facebook':
+     {'METHOD': 'oauth2',
+      'SCOPE': ['email', 'public_profile', 'user_friends'],
+      'FIELDS': [
+          'id',
+          'email',
+          'name',
+          'first_name',
+          'last_name',
+          'verified', ],
+      'EXCHANGE_TOKEN': True,
+      'LOCALE_FUNC': lambda request: 'en_US',
+      'VERIFIED_EMAIL': True,
+      'VERSION': 'v2.4'
+      }}

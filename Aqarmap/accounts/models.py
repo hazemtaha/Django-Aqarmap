@@ -1,8 +1,8 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from django.contrib.auth.models import User
-from properties.models import Properties
+from django.contrib.auth.models import AbstractUser
+# from properties.models import Properties
 # Create your models here.
 GENDER_CHOICES = (
     ('M', 'Male'),
@@ -26,9 +26,9 @@ def upload_location(instace, filename):
     return "%s/%s" % (new_id, filename)
 
 
-class UserProfile(models.Model):
+class UserProfile(AbstractUser):
 
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    # user = models.OneToOneField(User, on_delete=models.CASCADE)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     # update this field with choices field or auto generated countries
     country = models.CharField(max_length=50)
@@ -36,8 +36,8 @@ class UserProfile(models.Model):
         max_length=3, choices=CURRENCY)  # update this field like above
     phone_number = models.CharField(max_length=11)
     account_type = models.CharField(max_length=2, choices=ACCOUNT_TYPES)
-    image = models.ImageField(upload_to=upload_location,
-                              null=True, blank=True, width_field="img_width", height_field="img_height")
+    _image = models.ImageField(upload_to=upload_location,
+                               null=True, blank=True, width_field="img_width", height_field="img_height")
     img_height = models.IntegerField(default=0)
     img_width = models.IntegerField(default=0)
     points = models.IntegerField(default=100)
@@ -46,11 +46,11 @@ class UserProfile(models.Model):
         'self', through='UserMessages', symmetrical=False)
 
     def __str__(self):
-        return self.user.username
+        return self.username
 
 
 class UserMessages(models.Model):
     reciever = models.ForeignKey(UserProfile, related_name="reciever")
     sender = models.ForeignKey(UserProfile, related_name="sender")
-    prop = models.ForeignKey(Properties)
+    prop = models.ForeignKey('properties.Properties')
     msg_body = models.TextField()

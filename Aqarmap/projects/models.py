@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from accounts.models import UserProfile
 from django.contrib.auth.models import User
 from properties.models import PROPERTIES_TYPES
 # Create your models here.
@@ -14,7 +15,7 @@ class Projects(models.Model):
     lat = models.FloatField(null=True, blank=True)
     location_desc = models.TextField()
     services = models.TextField()
-    owner = models.ForeignKey(User)
+    owner = models.ForeignKey(UserProfile)
 
 
 class ProjectProperties(models.Model):

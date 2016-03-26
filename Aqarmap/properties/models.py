@@ -1,8 +1,11 @@
 from __future__ import unicode_literals
 from django.db import models
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
+# from accounts.models import UserProfile
 from model_utils.models import TimeStampedModel
-#This abstract base class just provides self-updating created and modified fields on any model that inherits from it.and you have to install it's package too from pip
+# This abstract base class just provides self-updating created and
+# modified fields on any model that inherits from it.and you have to
+# install it's package too from pip
 from geoposition.fields import GeopositionField
 # Create your models here.
 
@@ -32,18 +35,20 @@ class Properties(TimeStampedModel):
     size = models.IntegerField()
     yt_url = models.URLField()
     position = GeopositionField()
-    #owner = models.ForeignKey(User)
+    owner = models.ForeignKey('accounts.UserProfile')
     #p = Properties(title="Alrehab",status="true",prop_type='l',city="sharkia",neighborhood="belbies",category='s',description="new and unique yeah",price="1000000",size="200",lat="140000.4545",lon="200000.2200",yt_url="https://www.youtube.com/watch?v=FoAqHxm5dpo")
-    #save() for testing only
+    # save() for testing only
+
     def __str__(self):
         return self.title
 
 
 class PropertiesPhotos(models.Model):
     prop_photo = models.ImageField()
-    prop = models.ForeignKey(Properties, on_delete=models.CASCADE)
-    #pp=p.propertiesphotos_set.create(prop_photo="image_path")
-    #another test to link the foreign keys with each other
+    prop = models.ForeignKey('Properties', on_delete=models.CASCADE)
+    # pp=p.propertiesphotos_set.create(prop_photo="image_path")
+    # another test to link the foreign keys with each other
+
     def __str__(self):
         return str(self.prop_photo)
-        #this for admin readability
+        # this for admin readability
