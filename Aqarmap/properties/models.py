@@ -33,7 +33,7 @@ class Properties(TimeStampedModel):
     description = models.TextField()
     price = models.IntegerField()
     size = models.IntegerField()
-    yt_url = models.URLField()
+    yt_url = models.URLField(blank=True, null=True)
     position = GeopositionField()
     owner = models.ForeignKey('accounts.UserProfile')
     #p = Properties(title="Alrehab",status="true",prop_type='l',city="sharkia",neighborhood="belbies",category='s',description="new and unique yeah",price="1000000",size="200",lat="140000.4545",lon="200000.2200",yt_url="https://www.youtube.com/watch?v=FoAqHxm5dpo")
