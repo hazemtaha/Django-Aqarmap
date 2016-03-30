@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block content %}
+<h1>Search Results</h1>
+<hr> {% for result in results %}
+<a href="">
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="thumbnail">
+            <img src="{{ result.prop_photo.url }}" alt="">
+            <div class="caption">
+                <h2>{{ result.prop.title }}</h2>
+                <small>{{ result.prop.prop_type }}</small>
+                <hr>
+                <p>
+                    {{ result.prop.description | truncatechars:100}}
+                </p>
+            </div>
+        </div>
+    </div>
+</a>
+{% endfor %} {% endblock content %}

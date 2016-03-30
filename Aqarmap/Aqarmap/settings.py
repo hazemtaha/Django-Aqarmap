@@ -58,9 +58,11 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.twitter',
+    # django cities-light
+    'cities_light',
+    # django crispy-forms
+    'crispy_forms',
 ]
-# django-allauth
-SITE_ID = 2
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -125,17 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-# django-allauth related
-AUTHENTICATION_BACKENDS = (
-    # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',
 
-    # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
-)
-
-# django-allauth custom signup form
-ACCOUNT_SIGNUP_FORM_CLASS = 'accounts.forms.RegisterationForm'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
@@ -170,6 +162,21 @@ GEOPOSITION_MARKER_OPTIONS = {
 # sets the default user model to custom made one
 AUTH_USER_MODEL = "accounts.UserProfile"
 
+# django-allauth custom signup form
+ACCOUNT_SIGNUP_FORM_CLASS = 'accounts.forms.RegisterationForm'
+
+# django-allauth related
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+# django-allauth
+SITE_ID = 2
+
 SOCIALACCOUNT_PROVIDERS = \
     {'facebook':
      {'METHOD': 'oauth2',
@@ -186,3 +193,12 @@ SOCIALACCOUNT_PROVIDERS = \
       'VERIFIED_EMAIL': True,
       'VERSION': 'v2.4'
       }}
+# django cities-light related settings
+CITIES_LIGHT_TRANSLATION_LANGUAGES = ['en']
+CITIES_LIGHT_INCLUDE_COUNTRIES = ['EG']
+CITIES_LIGHT_INCLUDE_CITY_TYPES = ['PPL', 'PPLA', 'PPLA2', 'PPLA3',
+                                   'PPLA4', 'PPLC', 'PPLF', 'PPLG', 'PPLL', 'PPLR', 'PPLS', 'STLMT', ]
+
+# django crispy-forms related settings
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

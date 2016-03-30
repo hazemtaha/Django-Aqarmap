@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from cities_light.models import Country
 # from properties.models import Properties
 # Create your models here.
 GENDER_CHOICES = (
@@ -20,9 +21,9 @@ CURRENCY = (
 )
 
 
-def upload_location(instace, filename):
-    ProfileModel = instace.__class__
-    new_id = ProfileModel.objects.order_by('id').last().id + 1
+def upload_location(instance, filename):
+    UserProfileModel = instance.__class__
+    new_id = UserProfileModel.objects.order_by('id').last().id + 1
     return "%s/%s" % (new_id, filename)
 
 
@@ -31,7 +32,7 @@ class UserProfile(AbstractUser):
     # user = models.OneToOneField(User, on_delete=models.CASCADE)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     # update this field with choices field or auto generated countries
-    country = models.CharField(max_length=50)
+    country = models.ForeignKey(Country, null=True)
     default_currency = models.CharField(
         max_length=3, choices=CURRENCY)  # update this field like above
     phone_number = models.CharField(max_length=11)

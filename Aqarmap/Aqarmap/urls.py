@@ -23,9 +23,9 @@ from properties import urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    # url(r'^accounts/', include('accounts.urls')),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^index/', include('properties.urls')),
+    url(r'^', include('search.urls')),
 ]
 
 if settings.DEBUG:

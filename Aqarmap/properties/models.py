@@ -7,15 +7,16 @@ from model_utils.models import TimeStampedModel
 # modified fields on any model that inherits from it.and you have to
 # install it's package too from pip
 from geoposition.fields import GeopositionField
+from cities_light.models import City, Region
 # Create your models here.
 
 PROPERTIES_TYPES = (
-    ('a', 'Appartment'),
-    ('b', 'Building'),
-    ('l', 'Land'),
-    ('v', 'Villa'),
-    ('s', 'Store'),
-    ('o', 'Office'),
+    ('Appartment', 'Appartment'),
+    ('Building', 'Building'),
+    ('Land', 'Land'),
+    ('Villa', 'Villa'),
+    ('Store', 'Store'),
+    ('Office', 'Office'),
 )
 PROPERTIES_CATEGORIES = (
     ('s', 'For Sale'),
@@ -26,9 +27,9 @@ PROPERTIES_CATEGORIES = (
 class Properties(TimeStampedModel):
     title = models.CharField(max_length=255)
     status = models.BooleanField(default=False)
-    prop_type = models.CharField(max_length=1, choices=PROPERTIES_TYPES)
-    city = models.CharField(max_length=100)
-    neighborhood = models.CharField(max_length=100)
+    prop_type = models.CharField(max_length=20, choices=PROPERTIES_TYPES)
+    city = models.ForeignKey(Region)
+    neighborhood = models.ForeignKey(City)
     category = models.CharField(max_length=1, choices=PROPERTIES_CATEGORIES)
     description = models.TextField()
     price = models.IntegerField()
