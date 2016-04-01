@@ -36,9 +36,16 @@
 </nav>
 <!-- END of the header -->
 <div class="alert alert-info" role="alert"><h2>{{prop_info.title}}</h2>
-
-	<p>{{prop_info.category}}</p>   
-	<p align="right">{{prop_info.status}}</p>
+  {% if prop_info.category == "r" %}
+    <p>For Rent</p>
+  {% else %}
+  <p>For Sale</p>  
+  {% endif %}   
+  {% if prop_info.status == "False" %}
+    <p align="right">inactive</p>
+  {% else %}
+    <p align="right">active</p> 
+  {% endif %}
 </div>
 
 <!-- Begin of the slider -->
@@ -59,7 +66,7 @@
     <div class="carousel-inner" role="listbox">
     
     <div class="item active">
-    <img src="{% static "img/Open Source.png"%}" alt="Open Source" width="460" height="300">
+    <img src="{{prop_first.prop_photo.url}}" alt="Open Source" width="460" height="300">
     </div>  
 
 		{% for val in prop_photos%}

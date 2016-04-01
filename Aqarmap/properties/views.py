@@ -22,12 +22,37 @@ import re
 def prop_forSale(request):
 
     try:
-        property_info = Properties.objects.all()
-        context = {'property_info': property_info, }
+        property_info = Properties.objects.filter(category='s')
+        prop_photos = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop').first()
+        context = {'property_info': property_info,'prop_photos':prop_photos, }
     except Properties.DoesNotExist:
         return HttpResponse("There is no property to show")
 
     template = loader.get_template('properties/forSale.html')
+    return HttpResponse(template.render(context, request))
+
+def prop_forRent(request):
+
+    try:
+        property_info = Properties.objects.filter(category='r')
+        prop_photos = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop').first()
+        context = {'property_info': property_info,'prop_photos':prop_photos,}
+    except Properties.DoesNotExist:
+        return HttpResponse("There is no property to show")
+
+    template = loader.get_template('properties/forRent.html')
+    return HttpResponse(template.render(context, request))
+
+def list_u_prop(request):
+    
+    try:
+        property_info = Properties.objects.all()
+        prop_photos = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop').first()
+        context = {'property_info': property_info,'prop_photos':prop_photos,}
+    except Properties.DoesNotExist:
+        return HttpResponse("There is no property to show")
+
+    template = loader.get_template('properties/listProperties.html')
     return HttpResponse(template.render(context, request))
 
 
@@ -35,12 +60,13 @@ def prop_forSale(request):
 def prop_details(request, property_id):
     prop_info = get_object_or_404(Properties, id=property_id)
     prop_photos = PropertiesPhotos.objects.filter(prop_id=property_id)
-    return render(request, 'properties/propDetails.html', {'prop_info': prop_info, 'value': property_id, 'prop_photos': prop_photos})
-
+    property_info = Properties.objects.all()
+    prop_first = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop').first()
+    return render(request, 'properties/propDetails.html', {'prop_info': prop_info, 'value': property_id, 'prop_photos': prop_photos,'prop_first':prop_first,})
 
 # def addProperty(request, addProperty_id):
 def addProperty(request):
-    # creating Form View
+    # creating Form view
     # check first for the method if its post or get
     if request.method == "POST":
         # we will construct the form with it's data if it's a POST
