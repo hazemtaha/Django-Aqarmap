@@ -11,17 +11,19 @@ from django.forms import inlineformset_factory, BaseInlineFormSet
 
 from .forms import PropertiesForm, PropertiesFormSet
 # Create your views here.
+import urlparse
+from django import template
+from django.conf import settings
 
-
+register = template.Library()
+import re
 
 
 def prop_forSale(request):
 
 	try:
 		property_info = Properties.objects.all()
-		propPhoto_info = PropertiesPhotos.objects.all()
-
-		context = {'property_info':property_info,'propPhoto_info':property_info,}
+		context = {'property_info':property_info,}
 	except Properties.DoesNotExist:
 		return HttpResponse("There is no property to show")
 
@@ -32,11 +34,15 @@ def prop_forSale(request):
 
 
 #going to another page with the id
-def details(request, prop_id):
-	try:
-		return HttpResponse("These are some details about property_id %s." % prop_id)		
-	except:
-		raise Http404("details dosen't exist anymore")
+def prop_details(request):
+
+	if request.GET['prop_id']:
+		value = request.GET['prop_id']
+		prop_info = Properties.objects.get(id=value)
+		prop_photos = PropertiesPhotos.objects.filter(prop_id=value)
+		return render(request, 'properties/propDetails.html',{'prop_info':prop_info,'value':value,'prop_photos':prop_photos})
+	else :
+		return HttpResponse("Invalid Details")				
 
 
 
@@ -74,6 +80,3 @@ def addProperty(request):
 	template = loader.get_template('properties/addProperty.html')
 	context = {'form': form,'prop_form_set':prop_form_set,}
 	return HttpResponse(template.render(context, request))
-
-
-

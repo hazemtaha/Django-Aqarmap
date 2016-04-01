@@ -25,9 +25,10 @@ def search_results(request):
                                             neighborhood=neighborhood or None, prop_type=prop_type or None,
                                             price__range=(minimum_price, maximum_price))
 
+        # this will get all properties that have an image
         properties = PropertiesPhotos.objects.filter(
             prop__in=results).select_related('prop')
-        paginator = Paginator(properties, 25)
+        paginator = Paginator(properties, 2)
         page = request.GET.get('page')
         try:
             props = paginator.page(page)
