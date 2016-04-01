@@ -1,36 +1,7 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Properties For Rent</title>
-	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-	<script src="{% static 'js/jquery-1.11.2.js' %}"></script>
-	<script src="{% static 'js/bootstrap.min.js' %}"></script>
-</head>
-	
-<body>
-<!-- Header Only -->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Aqar Map ITI</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Add Property</a></li>
-       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">list properties
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">For sale</a></li>
-          <li><a href="#">For rent</a></li>
-          <li><a href="#">both</a></li> 
-        </ul>
-      </li>
-      
-    </ul>
-  </div>
-</nav>
+{% extends "base.html" %}{% load humanize %} {% load staticfiles %}
+
 <!-- END of the header -->
+{% block content %}
 <div class="alert alert-info" role="alert">Properties for rent</div>
 
 <!-- {% for titles in property_info %}
@@ -76,7 +47,4 @@
    
 </div>
 
-
-</body>
-
-</html>
+{% endblock content %}

@@ -1,39 +1,9 @@
-
-<!-- {{prop_info.title}} -->
-{% load staticfiles %}{% load embed_video_tags %}
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Properties For Sale</title>
-	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-	<script src="{% static 'js/jquery-1.11.2.js' %}"></script>
-	<script src="{% static 'js/bootstrap.min.js' %}"></script>
-  <script src="http://maps.googleapis.com/maps/api/js"></script>
-  <script src="{% static 'js/googleapi.js' %}"></script>
-</head>
-	
-<body>
-<!-- Header Only -->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Aqar Map ITI</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Add Property</a></li>
-       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">list properties
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">For sale</a></li>
-          <li><a href="#">For rent</a></li>
-          <li><a href="#">both</a></li> 
-        </ul>
-      </li>
-      
-    </ul>
-  </div>
-</nav>
+{% extends "base.html" %}
+{% load humanize %}
+{% load staticfiles %}
+{% load embed_video_tags %}
+<!-- END of the header -->
+{% block content %}
 <!-- END of the header -->
 <div class="alert alert-info" role="alert"><h2>{{prop_info.title}}</h2>
   {% if prop_info.category == "r" %}
@@ -152,5 +122,4 @@
 </div>  
 <!-- End Show locations -->
 <!-- END show youtube url if there is -->
-</body>
-</html>
+{% endblock content %}
