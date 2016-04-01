@@ -40,9 +40,11 @@ class Properties(TimeStampedModel):
     #p = Properties(title="Alrehab",status="true",prop_type='l',city="sharkia",neighborhood="belbies",category='s',description="new and unique yeah",price="1000000",size="200",lat="140000.4545",lon="200000.2200",yt_url="https://www.youtube.com/watch?v=FoAqHxm5dpo")
     # save() for testing only
 
+    def __unicode__(self):
+        return self.yt_url 
+        
     def __str__(self):
-        return self.title
-
+        return self.title       
 
 class PropertiesPhotos(models.Model):
     prop_photo = models.ImageField(null=True, blank=True, width_field="img_width", height_field="img_height")
