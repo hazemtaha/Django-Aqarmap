@@ -5,7 +5,7 @@ from .models import Subscribtions
 	#then telling which model should be used to create this form
 	class Meta:
 		model = Subscribtions
-		fields = ('city', 'neighborhood', 'property_type', 'property_categories', 'min_price', 'max_price', 'status')
+		fields = ('city', 'neighborhood', 'property_type', 'property_categories', 'min_price', 'max_price', 'status','user_id')
 
     #def subscribtions(self, request, sub):
      #   sub.city = self.cleaned_data['city']

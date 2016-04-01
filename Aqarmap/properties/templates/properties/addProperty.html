@@ -27,7 +27,7 @@
       <a class="navbar-brand" href="#">Aqar Map ITI</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="{% url 'index' %}">Add Property</a></li>
+      <li class="active"><a href="">Add Property</a></li>
        <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">list properties
         <span class="caret"></span></a>
@@ -56,7 +56,7 @@
 <!-- Create the first form here -->
 {% block content %}
 
-	<form method="POST" class="post-form form-horizontal" role="form">
+	<form method="POST" class="post-form form-horizontal" enctype="multipart/form-data" role="form">
 		
 		{% csrf_token %}
 
@@ -64,6 +64,14 @@
 		<div class="container">
 
 		  <h3><code>Property Description</code></h3>	
+
+			<div class="form-group">
+	    		<label class="control-label col-sm-2" for="category">User:</label>
+	    		<div class="col-sm-10">
+	    		{{ form.owner }}
+	    		</div>
+	    	</div>
+
 			<div class="form-group">
 	    		<label class="control-label col-sm-2" for="category">Category:</label>
 	    		<div class="col-sm-10">
@@ -127,7 +135,7 @@
 	    	</div>
 
 	    	<div class="form-group">
-	    		<label class="control-label col-sm-2" for="yt_url">YouTube Url:</label>
+	    		<label class="control-label col-sm-2" for="yt_url">YouTube Url (Optional) :</label>
 	    		<div class="col-sm-10">
 	      		{{ form.yt_url }}
 	    		</div>
@@ -136,6 +144,7 @@
 		</div>
 		<!-- End Property Information -->
 
+		<!-- Marking position on the map -->
 		<div class="container">
 		<h3><code>Mark Your Property Location on the map</code></h3>
 		<div class="form-group">
@@ -148,6 +157,32 @@
 	    		</div>
 	    </div>
 		</div>
+		<!-- End Marking position on the map -->
+
+	
+		<!-- Saving multiple photo -->
+		<!-- 	<div class="container">
+				<h3><code>Add your Photos</code></h3>
+		
+				<P><code>Add your Basic Photo</code></P>
+				<div class="form-group">
+			    		<label class="control-label col-sm-2" for="position">Basic Photo:</label>
+			    		<div class="col-sm-10">
+			    		{{ form.basic_photo }}
+			    		</div>
+			    </div> -->
+
+
+		<div class="form-group">
+	    		<label class="control-label col-sm-2" for="position">Photos:</label>
+	    		<div class="col-sm-10">
+	    		{{ prop_form_set.as_p }}
+	    		</div>
+	    </div>
+		</div>
+		<!-- EndSaving multiple photo -->
+		
+
 		<div class="form-group"> 
    		 	<div class="col-sm-offset-2 col-sm-10">
       			<button type="submit" class="save btn btn-success">Save</button>

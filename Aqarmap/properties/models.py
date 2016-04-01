@@ -8,6 +8,7 @@ from model_utils.models import TimeStampedModel
 # install it's package too from pip
 from geoposition.fields import GeopositionField
 # Create your models here.
+from accounts.models import upload_location
 
 PROPERTIES_TYPES = (
     ('a', 'Appartment'),
@@ -33,7 +34,7 @@ class Properties(TimeStampedModel):
     description = models.TextField()
     price = models.IntegerField()
     size = models.IntegerField()
-    yt_url = models.URLField()
+    yt_url = models.URLField(blank=True, null=True)
     position = GeopositionField()
     owner = models.ForeignKey('accounts.UserProfile')
     #p = Properties(title="Alrehab",status="true",prop_type='l',city="sharkia",neighborhood="belbies",category='s',description="new and unique yeah",price="1000000",size="200",lat="140000.4545",lon="200000.2200",yt_url="https://www.youtube.com/watch?v=FoAqHxm5dpo")
@@ -44,7 +45,9 @@ class Properties(TimeStampedModel):
 
 
 class PropertiesPhotos(models.Model):
-    prop_photo = models.ImageField()
+    prop_photo = models.ImageField(null=True, blank=True, width_field="img_width", height_field="img_height")
+    img_height = models.IntegerField(default=0)
+    img_width = models.IntegerField(default=0)
     prop = models.ForeignKey('Properties', on_delete=models.CASCADE)
     # pp=p.propertiesphotos_set.create(prop_photo="image_path")
     # another test to link the foreign keys with each other
