@@ -1,4 +1,8 @@
-{% extends "base.html" %} {% load humanize %}{% block content %}
+{% extends "base.html" %} {% load humanize %} {% load staticfiles %}
+{% block js %}
+    <script src='{% static "search/js/results-utils.js" %}'></script>
+{% endblock js %}
+{% block content %}
 <div class="row">
     <h1>Search Results</h1>
     <div>
@@ -11,8 +15,8 @@
         <div class="thumbnail">
             <img src="{{ result.prop_photo.url }}" alt="">
             <div class="caption">
-                <h2>{{ result.prop.title }} <small>{{ result.prop.prop_type }}</small> <small>{{ result.prop.created|naturaltime }}</small></h2>
-                <small> Size : {{ result.prop.size }}<small> M</small> | Price : {{ result.prop.price|intcomma }}<small> EGP</small></small>
+                <h2>{{ result.prop.title }} | <small>{{ result.prop.created|naturaltime }}</small></h2>
+                <small>Type : {{ result.prop.prop_type }}</small> | <small> Size : {{ result.prop.size }}<small> M</small> | Price : {{ result.prop.price|intcomma }}<small> EGP</small></small>
                 <hr>
                 <div class="well well-sm">
                     <p>
@@ -21,8 +25,8 @@
                 </div>
                 <div>
                     <p>
-                        <a href="#" class="btn btn-primary">Detail</a>
-                        <a href="#" class="btn btn-default">Compare</a>
+                        <a href="{% url 'properties:properties_details' property_id=result.prop.id %}" class="btn btn-primary">Detail</a>
+                        <a class="btn btn-default" name="compare" id="{{ result.prop.id }}">Compare</a>
                     </p>
                 </div>
             </div>

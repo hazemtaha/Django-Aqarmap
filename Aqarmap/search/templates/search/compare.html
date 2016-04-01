@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% load humanize %}{% load embed_video_tags %}{% block content %}
+<div class="row">
+    <h1>Properties Comparison</h1>
+    {% for result in results %}
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="thumbnail">
+            <img src="{{ result.prop_photo.url }}" alt="">
+            <div class="caption">
+                <h2>{{ result.prop.title }} <small>{{ result.prop.created|naturaltime }}</small></h2>
+
+                 <strong>Size :</strong> {{ result.prop.size }} M</small> <br> <strong>Price :</strong> {{ result.prop.price|intcomma }}<small> EGP</small></small><br>
+                 <strong>City : </strong> {{ result.prop.city }}<br>
+                 <strong>Neighborhood :</strong> {{ result.prop.neighborhood }}
+                <hr>
+                <strong>Description:</strong>
+                <div class="well well-sm">
+                    <p>
+                        {{ result.prop.description}}
+                    </p>
+                </div>
+                <strong>Youtube Video :</strong>
+                <div class="well well-sm">
+                    {% video result.prop.yt_url %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

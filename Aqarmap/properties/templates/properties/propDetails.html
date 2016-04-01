@@ -1,6 +1,6 @@
 
 <!-- {{prop_info.title}} -->
-{% load staticfiles %}
+{% load staticfiles %}{% load embed_video_tags %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -134,8 +134,7 @@
 <!-- show youtube url if there is -->
 <div class="container">
 	<h3><code>Related Videos</code></h3>
-		<embed src="{{prop_info.yt_url}}?rel=0">
-    <iframe width="560" height="345" src="{{prop_info.yt_url}}?rel=0" frameborder="2" allowfullscreen></iframe>
+    {% video prop_info.yt_url %}
 </div>
 
 <!-- Show locations -->

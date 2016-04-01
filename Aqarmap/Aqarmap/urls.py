@@ -24,12 +24,9 @@ from properties import urls
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('allauth.urls')),
-<<<<<<< HEAD
     url(r'^subscribtions/', include('subscribtions.urls')),
-=======
     url(r'^search/', include('search.urls', namespace='search')),
->>>>>>> 8102eb485b11ca8dcfffbd5d48a026eaff384f65
-    url(r'^properties/', include('properties.urls')),
+    url(r'^properties/', include('properties.urls', namespace='properties')),
 ]
 
 if settings.DEBUG:
