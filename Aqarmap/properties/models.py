@@ -42,13 +42,15 @@ class Properties(TimeStampedModel):
     # save() for testing only
 
     def __unicode__(self):
-        return self.yt_url 
-        
+        return self.title
+
     def __str__(self):
-        return self.title       
+        return self.title
+
 
 class PropertiesPhotos(models.Model):
-    prop_photo = models.ImageField(null=True, blank=True, width_field="img_width", height_field="img_height")
+    prop_photo = models.ImageField(
+        null=True, blank=True, width_field="img_width", height_field="img_height")
     img_height = models.IntegerField(default=0)
     img_width = models.IntegerField(default=0)
     prop = models.ForeignKey('Properties', on_delete=models.CASCADE)

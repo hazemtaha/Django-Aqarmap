@@ -62,10 +62,7 @@
            <h3><b>{{value.price}}</b>
            <p align="right">
            
-           <form action='properties_details' method='get' >
-           <input type="hidden" class="form-control" value="{{value.id}}" name="prop_id">
-           <button type="submit" class="btn btn-warning">Details</button>
-           </form>
+           <a href="{% url 'properties:properties_details' property_id=value.id %}" class="btn btn-primary">Details</a>
            
            </p>
            </h3>      

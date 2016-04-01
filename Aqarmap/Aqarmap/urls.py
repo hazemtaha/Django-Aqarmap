@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^search/', include('search.urls', namespace='search')),
-    url(r'^properties/', include('properties.urls')),
+    url(r'^properties/', include('properties.urls', namespace='properties')),
 ]
 
 if settings.DEBUG:

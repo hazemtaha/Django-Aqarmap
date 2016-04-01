@@ -63,6 +63,8 @@ INSTALLED_APPS = [
     'cities_light',
     # django crispy-forms
     'crispy_forms',
+    # video streaming embed video player
+    'embed_video'
 ]
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
