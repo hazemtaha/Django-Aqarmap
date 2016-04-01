@@ -25,7 +25,7 @@ class SearchForm(forms.Form):
         self.helper = FormHelper()
         self.helper.form_id = 'search_form'
         self.helper.form_method = 'get'
-        self.helper.form_action = 'search/results'
+        self.helper.form_action = 'results'
         self.helper.form_class = 'form-inline'
         self.helper.field_template = 'bootstrap3/layout/inline_field.html'
         self.helper.layout = Layout(

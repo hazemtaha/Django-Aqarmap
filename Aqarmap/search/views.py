@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .forms import SearchForm
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from search.forms import SearchForm
 from properties.models import Properties, PropertiesPhotos, PROPERTIES_TYPES
 # Create your views here.
 
@@ -24,10 +25,19 @@ def search_results(request):
                                             neighborhood=neighborhood or None, prop_type=prop_type or None,
                                             price__range=(minimum_price, maximum_price))
 
-        # properties = PropertiesPhotos.objects.all().select_related('prop')
         properties = PropertiesPhotos.objects.filter(
             prop__in=results).select_related('prop')
+        paginator = Paginator(properties, 25)
+        page = request.GET.get('page')
+        try:
+            props = paginator.page(page)
+        except PageNotAnInteger:
+            props = paginator.page(1)
+        except EmptyPage:
+            props = paginator.page(paginator.num_pages)
+        sort = request.GET.get('sort', 'prop.created')
         context = {
-            "results": properties,
+            "results": props,
+            "sort": sort,
         }
         return render(request, "search/results.html", context)

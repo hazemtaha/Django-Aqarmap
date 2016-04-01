@@ -1,19 +1,46 @@
-{% extends "base.html" %} {% block content %}
-<h1>Search Results</h1>
-<hr> {% for result in results %}
-<a href="">
+{% extends "base.html" %} {% load humanize %}{% block content %}
+<div class="row">
+    <h1>Search Results</h1>
+    <div>
+        <strong>Sort By :</strong> <a href="{% url 'search:results' %}?category={{ request.GET.category }}&city={{ request.GET.city }}&neighborhood={{ request.GET.neighborhood }}&prop_type={{ request.GET.prop_type }}&minimum_price={{ request.GET.minimum_price }}&maximum_price={{ request.GET.maximum_price }}&sort=prop.size">Size</a> |
+        <a href="{% url 'search:results' %}?category={{ request.GET.category }}&city={{ request.GET.city }}&neighborhood={{ request.GET.neighborhood }}&prop_type={{ request.GET.prop_type }}&minimum_price={{ request.GET.minimum_price }}&maximum_price={{ request.GET.maximum_price }}&sort=prop.price">Price</a> |
+        <a href="{% url 'search:results' %}?category={{ request.GET.category }}&city={{ request.GET.city }}&neighborhood={{ request.GET.neighborhood }}&prop_type={{ request.GET.prop_type }}&minimum_price={{ request.GET.minimum_price }}&maximum_price={{ request.GET.maximum_price }}&sort=prop.modified">Creation</a>
+    </div>
+    <hr> {% for result in results|dictsort:sort %}
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
         <div class="thumbnail">
             <img src="{{ result.prop_photo.url }}" alt="">
             <div class="caption">
-                <h2>{{ result.prop.title }}</h2>
-                <small>{{ result.prop.prop_type }}</small>
+                <h2>{{ result.prop.title }} <small>{{ result.prop.prop_type }}</small> <small>{{ result.prop.created|naturaltime }}</small></h2>
+                <small> Size : {{ result.prop.size }}<small> M</small> | Price : {{ result.prop.price|intcomma }}<small> EGP</small></small>
                 <hr>
-                <p>
-                    {{ result.prop.description | truncatechars:100}}
-                </p>
+                <div class="well well-sm">
+                    <p>
+                        {{ result.prop.description | truncatechars:100}}
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <a href="#" class="btn btn-primary">Detail</a>
+                        <a href="#" class="btn btn-default">Compare</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</a>
-{% endfor %} {% endblock content %}
+    {% endfor %}
+</div>
+<div class="pagination col-sm-12">
+    <span class="step-links col-sm-offset-6">
+        {% if results.has_previous %}
+            <a href="?category={{ request.GET.category }}&city={{ request.GET.city }}&neighborhood={{ request.GET.neighborhood }}&prop_type={{ request.GET.prop_type }}&minimum_price={{ request.GET.minimum_price }}&maximum_price={{ request.GET.maximum_price }}&page={{ results.previous_page_number }}">Previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ results.number }} of {{ results.paginator.num_pages }}
+        </span> 
+        {% if results.has_next %}
+            <a href="?category={{ request.GET.category }}&city={{ request.GET.city }}&neighborhood={{ request.GET.neighborhood }}&prop_type={{ request.GET.prop_type }}&minimum_price={{ request.GET.minimum_price }}&maximum_price={{ request.GET.maximum_price }}&page={{ results.next_page_number }}">Next</a> {% endif %}
+    </span>
+</div>
+{% endblock content %}

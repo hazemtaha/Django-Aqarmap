@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'accounts.apps.AccountsConfig',
     'listings.apps.ListingsConfig',
     'subscribtions.apps.SubscribtionsConfig',
@@ -105,7 +106,7 @@ DATABASES = {
         'NAME': 'django_aqarmap',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': '0160',
+        'PASSWORD': 'iti',
     }
 }
 

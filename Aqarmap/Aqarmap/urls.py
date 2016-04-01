@@ -24,7 +24,7 @@ from properties import urls
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('allauth.urls')),
-    url(r'search^', include('search.urls'))
+    url(r'^search/', include('search.urls', namespace='search')),
     url(r'^', include('properties.urls')),
 ]
 
