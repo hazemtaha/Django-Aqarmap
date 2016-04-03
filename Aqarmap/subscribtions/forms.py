@@ -13,7 +13,7 @@ class SubscribtionsForm(forms.Form):
 	property_categories = forms.ChoiceField(choices=PROPERTIES_CATEGORIES, widget=forms.Select(), required=False)
 	min_price = forms.IntegerField(min_value=0, required=False)
 	max_price = forms.IntegerField(min_value=0, required=False)
-	status = forms.ChoiceField(choices=STATUS, widget=forms.Select(), required=False)
+	#status = forms.ChoiceField(STATUS,widget=forms.Select(),required=False)
 	def __init__(self, *args, **kwargs):
 		super(SubscribtionsForm, self).__init__(*args, **kwargs)
 		self.helper = FormHelper()
@@ -29,7 +29,7 @@ class SubscribtionsForm(forms.Form):
             Field('property_categories'),
             Field('min_price'),
             Field('max_price'),
-            Field('status'),
+            #Field('status'),
         )
 		self.helper.add_input(Submit('submit', 'Submit'))
 

@@ -1,7 +1,42 @@
-{% extends "base.html" %} {% load crispy_forms_tags %} {% block content %}
+{% extends "base.html" %} {% load crispy_forms_tags %} 
 
-    <h1>Subscribtions</h1>
+
+
+
+<div class="row">
+{% block content %}
+
+<h1>Subscribtions</h1>
     <hr>
-{% crispy form %}
+    <table class="table-striped"><tr><td>{% crispy form %}</td></tr>
+    </table>
+
+	
+    <div class="row">
+    <h1>Your Subscribtions</h1>
+    <table class="table-striped">
+    <tr>
+    <th>City</th><th>Neightborhood</th><th>Property Type</th><th>Property Category</th><th>Min Price</th><th>Max Price</th><th>Status</th></tr>
+    {% for value in subs %}
+    <tr>
+    <td><span>{{value.city}}</span></td>
+    <td><span>{{value.neighborhood}}</span></td>
+    <td><span>{{value.property_type}}</span></td>
+    <td><span>{{value.property_categories}}</span></td>
+    <td><span>{{value.min_price}}</span></td>
+    <td><span>{{value.max_price}}</span></td>
+    <td>{% if value.status %}<a href="{% url 'subscribtions:active' %}?sub_id={{ value.id }}" class="btn btn-success">Active</a>
+    {% else %}
+    <a href="{% url 'subscribtions:active' %}?sub_id={{ value.id }}" class="btn btn-danger">InActive</a>
+    {% endif %}
+    </td>
+    <td><a href="{% url 'subscribtions:delete_sub' %}?sub_id={{ value.id }}" class="btn btn-danger">Delete</a></td>
+	</tr>
+    	{% endfor %}
+    </table>
+</div>
 
 {% endblock content %}
+</div>
+
+

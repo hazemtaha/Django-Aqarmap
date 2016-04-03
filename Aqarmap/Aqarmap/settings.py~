@@ -108,8 +108,12 @@ DATABASES = {
         'NAME': 'django_aqarmap',
         'HOST': 'localhost',
         'USER': 'root',
+<<<<<<< HEAD
         'PASSWORD': 'hussien660',
 
+=======
+        'PASSWORD': '0160',
+>>>>>>> a659178834b83c098ca7b9f6efa1cce843f74047
     }
 }
 
@@ -206,37 +210,4 @@ CITIES_LIGHT_INCLUDE_CITY_TYPES = ['PPL', 'PPLA', 'PPLA2', 'PPLA3',
 # django crispy-forms related settings
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'simple': {
-            'format': '%(levelname)s %(message)s'
-        },
-    },
-    'handlers': {
-        'console':{
-            'level':'DEBUG',
-            'class':'logging.StreamHandler',
-            'formatter': 'simple'
-        },
-    },
-    'loggers': {
-        'cities_light': {
-            'handlers':['console'],
-            'propagate': True,
-            'level':'DEBUG',
-        },
-       
-
- # also use this one to see SQL queries
-        'django': {
-            'handlers':['console'],
-            'propagate': True,
-            'level':'DEBUG',
-        },
-    }
-}
-
 
