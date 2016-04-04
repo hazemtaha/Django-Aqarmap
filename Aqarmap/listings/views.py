@@ -36,3 +36,11 @@ def EditProp(request, prop_id):
     context = {'form': form}
 
     return render(request, "editProperties.html", context)
+
+
+@login_required
+def delete(request, prop_id):
+
+    property = Properties.objects.get(id=prop_id)
+    property.delete()
+    return redirect('listings:listProperties')
