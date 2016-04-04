@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
     url(r'^search/', include('search.urls', namespace='search')),
     url(r'^properties/', include('properties.urls', namespace='properties')),
+    url(r'^settings/', include('user_settings.urls', namespace='settings')),
 ]
 
 if settings.DEBUG:
