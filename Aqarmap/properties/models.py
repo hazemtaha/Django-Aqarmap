@@ -23,7 +23,10 @@ PROPERTIES_CATEGORIES = (
     ('s', 'For Sale'),
     ('r', 'For Rent'),
 )
-
+STATUS = (
+	(True,'Active'),
+	(False,'InActive'),
+)
 
 class Properties(TimeStampedModel):
     title = models.CharField(max_length=255)
