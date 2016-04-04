@@ -2,175 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0aa24575-9008-41d8-84f0-7ef0bfbe0011" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/global_media/12799356_448783765327706_4597441905524265295_n.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/global_media/12799356_448783765327706_4597441905524265295_n_J0SiVwJ.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/global_media/12799356_448783765327706_4597441905524265295_n_qptO4rA.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/global_media/12802980_448783688661047_3201699891845494136_n.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/global_media/12806167_448783848661031_6680303780275831324_n.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/global_media/12806167_448783848661031_6680303780275831324_n_FVl17uN.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/global_media/12806167_448783848661031_6680303780275831324_n_kSzhyZe.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/global_media/2/Music_by_tomasino.cz.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/global_media/Pay_It_Forward.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/global_media/Pay_It_Forward_aIxdMXv.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/global_media/UP.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Aqarmap/properties/templates/properties/forRent.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Aqarmap/properties/templates/properties/listProperties.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Aqarmap/subscribtions/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Aqarmap/subscribtions/static/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Aqarmap/subscribtions/static/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Aqarmap/subscribtions/static/js/jquery-1.11.2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Aqarmap/subscribtions/templates/results.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Aqarmap/subscribtions/templates/subscribtion.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Aqarmap/subscribtions/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Aqarmap/user_settings/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Aqarmap/user_settings/templates/user_settings/settings.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Aqarmap/user_settings/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/global_static/css/search.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Aqarmap/accounts/migrations/0002_auto_20160401_1141.py" afterPath="$PROJECT_DIR$/Aqarmap/accounts/migrations/0002_auto_20160402_0946.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/properties/static/img/Open Source.png" afterPath="$PROJECT_DIR$/Aqarmap/properties/static/img/Open Source.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_media/Utopic_Unicorn__by_Bedis_ElAchКche.jpg" afterPath="$PROJECT_DIR$/global_media/Utopic_Unicorn__by_Bedis_ElAchКche.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_media/Warm_grasses_by_dcsearle.t21.jpg" afterPath="$PROJECT_DIR$/global_media/Warm_grasses_by_dcsearle.t21.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_media/xgu472hf2_by_lariliikala.jpg" afterPath="$PROJECT_DIR$/global_media/xgu472hf2_by_lariliikala.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/fonts/Roboto-Bold-webfont.woff" afterPath="$PROJECT_DIR$/global_static/admin/fonts/Roboto-Bold-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/fonts/Roboto-Light-webfont.woff" afterPath="$PROJECT_DIR$/global_static/admin/fonts/Roboto-Light-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/fonts/Roboto-Regular-webfont.woff" afterPath="$PROJECT_DIR$/global_static/admin/fonts/Roboto-Regular-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Aqarmap/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/Aqarmap/__init__.py" afterPath="$PROJECT_DIR$/Aqarmap/Aqarmap/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/Aqarmap/settings.py" afterPath="$PROJECT_DIR$/Aqarmap/Aqarmap/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/Aqarmap/urls.py" afterPath="$PROJECT_DIR$/Aqarmap/Aqarmap/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/Aqarmap/wsgi.py" afterPath="$PROJECT_DIR$/Aqarmap/Aqarmap/wsgi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/accounts/__init__.py" afterPath="$PROJECT_DIR$/Aqarmap/accounts/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/accounts/admin.py" afterPath="$PROJECT_DIR$/Aqarmap/accounts/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/accounts/apps.py" afterPath="$PROJECT_DIR$/Aqarmap/accounts/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/accounts/forms.py" afterPath="$PROJECT_DIR$/Aqarmap/accounts/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/accounts/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/Aqarmap/accounts/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/accounts/migrations/__init__.py" afterPath="$PROJECT_DIR$/Aqarmap/accounts/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/accounts/models.py" afterPath="$PROJECT_DIR$/Aqarmap/accounts/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/accounts/templates/accounts/login.html" afterPath="$PROJECT_DIR$/Aqarmap/accounts/templates/accounts/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/accounts/templates/accounts/registeration.html" afterPath="$PROJECT_DIR$/Aqarmap/accounts/templates/accounts/registeration.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/accounts/tests.py" afterPath="$PROJECT_DIR$/Aqarmap/accounts/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/accounts/urls.py" afterPath="$PROJECT_DIR$/Aqarmap/accounts/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/accounts/views.py" afterPath="$PROJECT_DIR$/Aqarmap/accounts/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/listings/__init__.py" afterPath="$PROJECT_DIR$/Aqarmap/listings/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/listings/admin.py" afterPath="$PROJECT_DIR$/Aqarmap/listings/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/listings/apps.py" afterPath="$PROJECT_DIR$/Aqarmap/listings/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/listings/models.py" afterPath="$PROJECT_DIR$/Aqarmap/listings/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/listings/tests.py" afterPath="$PROJECT_DIR$/Aqarmap/listings/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/listings/templates/editProperties.html" afterPath="$PROJECT_DIR$/Aqarmap/listings/templates/editProperties.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/listings/templates/listProperties.html" afterPath="$PROJECT_DIR$/Aqarmap/listings/templates/listProperties.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/listings/urls.py" afterPath="$PROJECT_DIR$/Aqarmap/listings/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/listings/views.py" afterPath="$PROJECT_DIR$/Aqarmap/listings/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/messages/__init__.py" afterPath="$PROJECT_DIR$/Aqarmap/messages/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/messages/admin.py" afterPath="$PROJECT_DIR$/Aqarmap/messages/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/messages/apps.py" afterPath="$PROJECT_DIR$/Aqarmap/messages/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/messages/models.py" afterPath="$PROJECT_DIR$/Aqarmap/messages/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/messages/tests.py" afterPath="$PROJECT_DIR$/Aqarmap/messages/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/messages/views.py" afterPath="$PROJECT_DIR$/Aqarmap/messages/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/points/__init__.py" afterPath="$PROJECT_DIR$/Aqarmap/points/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/points/admin.py" afterPath="$PROJECT_DIR$/Aqarmap/points/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/points/apps.py" afterPath="$PROJECT_DIR$/Aqarmap/points/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/points/models.py" afterPath="$PROJECT_DIR$/Aqarmap/points/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/points/tests.py" afterPath="$PROJECT_DIR$/Aqarmap/points/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/points/views.py" afterPath="$PROJECT_DIR$/Aqarmap/points/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/projects/__init__.py" afterPath="$PROJECT_DIR$/Aqarmap/projects/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/projects/admin.py" afterPath="$PROJECT_DIR$/Aqarmap/projects/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/projects/apps.py" afterPath="$PROJECT_DIR$/Aqarmap/projects/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/projects/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/Aqarmap/projects/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/projects/migrations/__init__.py" afterPath="$PROJECT_DIR$/Aqarmap/projects/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/projects/models.py" afterPath="$PROJECT_DIR$/Aqarmap/projects/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/projects/tests.py" afterPath="$PROJECT_DIR$/Aqarmap/projects/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/projects/views.py" afterPath="$PROJECT_DIR$/Aqarmap/projects/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/properties/__init__.py" afterPath="$PROJECT_DIR$/Aqarmap/properties/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/properties/admin.py" afterPath="$PROJECT_DIR$/Aqarmap/properties/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/properties/apps.py" afterPath="$PROJECT_DIR$/Aqarmap/properties/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/properties/forms.py" afterPath="$PROJECT_DIR$/Aqarmap/properties/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/properties/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/Aqarmap/properties/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/properties/migrations/__init__.py" afterPath="$PROJECT_DIR$/Aqarmap/properties/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/properties/models.py" afterPath="$PROJECT_DIR$/Aqarmap/properties/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/properties/templates/custom_filters.py" afterPath="$PROJECT_DIR$/Aqarmap/properties/templates/custom_filters.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/properties/templates/properties/addProperty.html" afterPath="$PROJECT_DIR$/Aqarmap/properties/templates/properties/addProperty.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/properties/templates/properties/custom_filters.py" afterPath="$PROJECT_DIR$/Aqarmap/properties/templates/properties/custom_filters.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/properties/templates/properties/forSale.html" afterPath="$PROJECT_DIR$/Aqarmap/properties/templates/properties/forSale.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/properties/templates/properties/propDetails.html" afterPath="$PROJECT_DIR$/Aqarmap/properties/templates/properties/propDetails.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/properties/tests.py" afterPath="$PROJECT_DIR$/Aqarmap/properties/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/properties/urls.py" afterPath="$PROJECT_DIR$/Aqarmap/properties/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/properties/views.py" afterPath="$PROJECT_DIR$/Aqarmap/properties/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/search/__init__.py" afterPath="$PROJECT_DIR$/Aqarmap/search/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/search/admin.py" afterPath="$PROJECT_DIR$/Aqarmap/search/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/search/apps.py" afterPath="$PROJECT_DIR$/Aqarmap/search/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/search/forms.py" afterPath="$PROJECT_DIR$/Aqarmap/search/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/search/models.py" afterPath="$PROJECT_DIR$/Aqarmap/search/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/search/tests.py" afterPath="$PROJECT_DIR$/Aqarmap/search/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/search/views.py" afterPath="$PROJECT_DIR$/Aqarmap/search/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/subscribtions/__init__.py" afterPath="$PROJECT_DIR$/Aqarmap/subscribtions/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/subscribtions/admin.py" afterPath="$PROJECT_DIR$/Aqarmap/subscribtions/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/subscribtions/apps.py" afterPath="$PROJECT_DIR$/Aqarmap/subscribtions/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/subscribtions/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/Aqarmap/subscribtions/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/subscribtions/migrations/__init__.py" afterPath="$PROJECT_DIR$/Aqarmap/subscribtions/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/subscribtions/models.py" afterPath="$PROJECT_DIR$/Aqarmap/subscribtions/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/subscribtions/tests.py" afterPath="$PROJECT_DIR$/Aqarmap/subscribtions/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/subscribtions/views.py" afterPath="$PROJECT_DIR$/Aqarmap/subscribtions/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/templates/base.html" afterPath="$PROJECT_DIR$/Aqarmap/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/user_settings/__init__.py" afterPath="$PROJECT_DIR$/Aqarmap/user_settings/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/user_settings/admin.py" afterPath="$PROJECT_DIR$/Aqarmap/user_settings/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/user_settings/apps.py" afterPath="$PROJECT_DIR$/Aqarmap/user_settings/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/user_settings/models.py" afterPath="$PROJECT_DIR$/Aqarmap/user_settings/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/user_settings/tests.py" afterPath="$PROJECT_DIR$/Aqarmap/user_settings/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Aqarmap/user_settings/views.py" afterPath="$PROJECT_DIR$/Aqarmap/user_settings/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/css/base.css" afterPath="$PROJECT_DIR$/global_static/admin/css/base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/css/changelists.css" afterPath="$PROJECT_DIR$/global_static/admin/css/changelists.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/css/dashboard.css" afterPath="$PROJECT_DIR$/global_static/admin/css/dashboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/css/fonts.css" afterPath="$PROJECT_DIR$/global_static/admin/css/fonts.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/css/forms.css" afterPath="$PROJECT_DIR$/global_static/admin/css/forms.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/css/login.css" afterPath="$PROJECT_DIR$/global_static/admin/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/css/rtl.css" afterPath="$PROJECT_DIR$/global_static/admin/css/rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/css/widgets.css" afterPath="$PROJECT_DIR$/global_static/admin/css/widgets.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/fonts/LICENSE.txt" afterPath="$PROJECT_DIR$/global_static/admin/fonts/LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/fonts/README.txt" afterPath="$PROJECT_DIR$/global_static/admin/fonts/README.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/LICENSE" afterPath="$PROJECT_DIR$/global_static/admin/img/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/README.txt" afterPath="$PROJECT_DIR$/global_static/admin/img/README.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/calendar-icons.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/calendar-icons.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/gis/move_vertex_off.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/gis/move_vertex_off.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/gis/move_vertex_on.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/gis/move_vertex_on.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/icon-addlink.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/icon-addlink.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/icon-alert.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/icon-alert.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/icon-calendar.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/icon-calendar.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/icon-changelink.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/icon-changelink.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/icon-clock.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/icon-clock.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/icon-deletelink.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/icon-deletelink.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/icon-no.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/icon-no.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/icon-unknown-alt.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/icon-unknown-alt.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/icon-unknown.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/icon-unknown.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/icon-yes.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/icon-yes.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/inline-delete.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/inline-delete.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/search.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/search.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/selector-icons.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/selector-icons.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/sorting-icons.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/sorting-icons.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/tooltag-add.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/tooltag-add.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/img/tooltag-arrowright.svg" afterPath="$PROJECT_DIR$/global_static/admin/img/tooltag-arrowright.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/SelectBox.js" afterPath="$PROJECT_DIR$/global_static/admin/js/SelectBox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/SelectFilter2.js" afterPath="$PROJECT_DIR$/global_static/admin/js/SelectFilter2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/actions.js" afterPath="$PROJECT_DIR$/global_static/admin/js/actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/actions.min.js" afterPath="$PROJECT_DIR$/global_static/admin/js/actions.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/admin/DateTimeShortcuts.js" afterPath="$PROJECT_DIR$/global_static/admin/js/admin/DateTimeShortcuts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/admin/RelatedObjectLookups.js" afterPath="$PROJECT_DIR$/global_static/admin/js/admin/RelatedObjectLookups.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/calendar.js" afterPath="$PROJECT_DIR$/global_static/admin/js/calendar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/collapse.js" afterPath="$PROJECT_DIR$/global_static/admin/js/collapse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/collapse.min.js" afterPath="$PROJECT_DIR$/global_static/admin/js/collapse.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/core.js" afterPath="$PROJECT_DIR$/global_static/admin/js/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/inlines.js" afterPath="$PROJECT_DIR$/global_static/admin/js/inlines.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/inlines.min.js" afterPath="$PROJECT_DIR$/global_static/admin/js/inlines.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/jquery.init.js" afterPath="$PROJECT_DIR$/global_static/admin/js/jquery.init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/prepopulate.js" afterPath="$PROJECT_DIR$/global_static/admin/js/prepopulate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/prepopulate.min.js" afterPath="$PROJECT_DIR$/global_static/admin/js/prepopulate.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/timeparse.js" afterPath="$PROJECT_DIR$/global_static/admin/js/timeparse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/urlify.js" afterPath="$PROJECT_DIR$/global_static/admin/js/urlify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/vendor/jquery/LICENSE-JQUERY.txt" afterPath="$PROJECT_DIR$/global_static/admin/js/vendor/jquery/LICENSE-JQUERY.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/vendor/jquery/jquery.js" afterPath="$PROJECT_DIR$/global_static/admin/js/vendor/jquery/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/vendor/jquery/jquery.min.js" afterPath="$PROJECT_DIR$/global_static/admin/js/vendor/jquery/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" afterPath="$PROJECT_DIR$/global_static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global_static/admin/js/vendor/xregexp/xregexp.min.js" afterPath="$PROJECT_DIR$/global_static/admin/js/vendor/xregexp/xregexp.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
     </list>
     <ignored path="Django_Aqarmap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -183,6 +20,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Django-Aqarmap$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1459776057334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Aqarmap" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -195,8 +35,8 @@
       <file leaf-file-name="listProperties.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Aqarmap/listings/templates/listProperties.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="59" selection-start-line="60" selection-start-column="59" selection-end-line="60" selection-end-column="59" />
+            <state vertical-scroll-proportion="-7.580645">
+              <caret line="56" column="40" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -205,44 +45,20 @@
       <file leaf-file-name="editProperties.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Aqarmap/listings/templates/editProperties.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-41.16129">
-              <caret line="58" column="15" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="31" />
+            <state vertical-scroll-proportion="36.452053">
+              <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Aqarmap/listings/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.054054">
-              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.5074627">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Aqarmap/properties/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.405405">
-              <caret line="93" column="9" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Aqarmap/properties/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.8918915">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -251,8 +67,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Aqarmap/listings/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.756757">
-              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -260,21 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Aqarmap/Aqarmap/urls.py">
+      <file leaf-file-name="results.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Aqarmap/search/templates/search/results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60136676">
-              <caret line="30" column="76" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addProperty.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Aqarmap/properties/templates/properties/addProperty.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.451612">
-              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+            <state vertical-scroll-proportion="-11.32258">
+              <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -297,11 +103,11 @@
       <list>
         <option value="$PROJECT_DIR$/Aqarmap/search/forms.py" />
         <option value="$PROJECT_DIR$/Aqarmap/search/views.py" />
-        <option value="$PROJECT_DIR$/Aqarmap/listings/templates/listProperties.html" />
         <option value="$PROJECT_DIR$/Aqarmap/listings/templates/editProperties.html" />
+        <option value="$PROJECT_DIR$/Aqarmap/Aqarmap/urls.py" />
+        <option value="$PROJECT_DIR$/Aqarmap/listings/templates/listProperties.html" />
         <option value="$PROJECT_DIR$/Aqarmap/listings/views.py" />
         <option value="$PROJECT_DIR$/Aqarmap/listings/urls.py" />
-        <option value="$PROJECT_DIR$/Aqarmap/Aqarmap/urls.py" />
       </list>
     </option>
   </component>
@@ -408,7 +214,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="properties" />
+              <option name="myItemId" value="search" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -426,25 +232,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="listings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Django-Aqarmap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Django-Aqarmap" />
+              <option name="myItemId" value="search" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Aqarmap" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Aqarmap" />
+              <option name="myItemId" value="search" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -454,14 +250,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="last_opened_file_path" value="$USER_HOME$/virtualenvs/aqarmap/bin/python" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Unnamed">
     <configuration default="true" type="CompoundRunConfigurationType" factoryName="Compound Run Configuration">
       <method />
     </configuration>
@@ -658,6 +454,27 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="Unnamed" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/virtualenvs/aqarmap/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Aqarmap" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Django_Aqarmap" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Aqarmap/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.Unnamed" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -676,24 +493,24 @@
     <frame x="69" y="30" width="1851" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18854673" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1858455" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39936775" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -709,7 +526,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -803,13 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Aqarmap/search/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Aqarmap/search/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -817,33 +627,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Aqarmap/listings/templates/listProperties.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="59" selection-start-line="60" selection-start-column="59" selection-end-line="60" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Aqarmap/listings/templates/editProperties.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-41.16129">
-          <caret line="58" column="15" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Aqarmap/properties/templates/properties/addProperty.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.451612">
-          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Aqarmap/properties/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.405405">
+        <state vertical-scroll-proportion="0.69134396">
           <caret line="93" column="9" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
@@ -851,30 +637,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Aqarmap/properties/forms.py">
+    <entry file="file://$PROJECT_DIR$/Aqarmap/search/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.8918915">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Aqarmap/listings/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.054054">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+        <state vertical-scroll-proportion="-0.37585422">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Aqarmap/listings/urls.py">
+    <entry file="file://$PROJECT_DIR$/Aqarmap/user_settings/templates/user_settings/settings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.756757">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aqarmap/user_settings/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6514806">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aqarmap/user_settings/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.075170845">
+          <caret line="3" column="53" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/virtualenvs/aqarmap/local/lib/python2.7/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4552239">
+          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aqarmap/properties/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61567163">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aqarmap/properties/templates/properties/addProperty.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52079207">
+          <caret line="148" column="16" selection-start-line="21" selection-start-column="8" selection-end-line="148" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aqarmap/search/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
@@ -883,9 +713,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Aqarmap/Aqarmap/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60136676">
-          <caret line="30" column="76" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="76" />
+        <state vertical-scroll-proportion="0.5018657">
+          <caret line="29" column="67" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="67" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aqarmap/user_settings/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49253732">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aqarmap/listings/templates/listProperties.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.580645">
+          <caret line="56" column="40" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aqarmap/listings/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aqarmap/search/templates/search/results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.32258">
+          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aqarmap/listings/templates/editProperties.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="36.452053">
+          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aqarmap/listings/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5074627">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
