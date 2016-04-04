@@ -184,6 +184,7 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 2
 # to override the redirection after login or signup to custom url
 LOGIN_REDIRECT_URL = 'search:index'
+LOGOUT_URL = '/accounts/login/'
 SOCIALACCOUNT_PROVIDERS = \
     {'facebook':
      {'METHOD': 'oauth2',

@@ -17,18 +17,20 @@
       <nav class="navbar navbar-default">
                      <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#">AQAR MAP ITI</a>
+                        <a class="navbar-brand" href="{% url 'search:index' %}">AQAR MAP ITI</a>
                     </div>
                          <ul class="nav navbar-nav">
-                              <li class="active"><a href="#">Home</a></li>
+                              <li class="active"><a href="{% url 'search:index' %}">Home</a></li>
+                          {% if request.user.is_authenticated %}
+                                
                                <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Property
                                         <span class="caret"></span></a>
                                             <ul class="dropdown-menu">
-                                              <li><a href="#">Add New Property</a></li>
-                                              <li><a href="properties/propertiesforsale">List Your Properties for sale</a></li>
-                                              <li><a href="#">List Your Properties for rent</a></li>
-                                              <li><a href="#">List All Your Properties</a></li>
+                                              <li><a href="{% url 'properties:addproperty' %}">Add New Property</a></li>
+                                              <li><a href="{% url 'properties:allproperties' %}">List All Properties</a></li>
+                                              <li><a href="{% url 'properties:propertiesforsale' %}">Properties for sale</a></li>
+                                              <li><a href="{% url 'properties:propertiesforrent' %}">Properties for rent</a></li>
                                             </ul>
                                             </li>
 
@@ -43,16 +45,22 @@
                                             </li>
 
 
-                              <li><a href="#">Profile</a></li>
-                              <li><a href="{% url 'subscribtions:sub_results' %}">Subscribtions Results</a></li>
+                              <li><a href="{% url 'subscribtions:subscribtions' %}">Subscribtions</a></li>
+                              <li><a href="{% url 'settings:user_setting' %}">Settings</a></li>
+                          {% endif %}
+
                          </ul>
                     <ul class="nav navbar-nav navbar-right">
     
                     <!-- Search Box -->
                         
                     <!-- Endo Of search -->
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    {% if request.user.is_authenticated %}
+                      <li><a href="{% url 'account_logout' %}"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                    {% else %}
+                      <li><a href="{% url 'account_signup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                      <li><a href="{% url 'account_login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    {% endif %}
                         </ul>
 
                     </div>

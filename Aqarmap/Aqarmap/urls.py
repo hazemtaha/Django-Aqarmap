@@ -28,6 +28,8 @@ urlpatterns = [
     url(r'^search/', include('search.urls', namespace='search')),
     url(r'^properties/', include('properties.urls', namespace='properties')),
     url(r'^settings/', include('user_settings.urls', namespace='settings')),
+    url(r'^', include('search.urls', namespace='search')),
+
 ]
 
 if settings.DEBUG:
