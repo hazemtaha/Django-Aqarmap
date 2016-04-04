@@ -10,7 +10,7 @@ class PropertiesForm(forms.ModelForm):
 
     class Meta:
         model = Properties
-        fields = ('owner', 'title', 'prop_type', 'city', 'neighborhood',
+        fields = ('title', 'prop_type', 'city', 'neighborhood',
                   'category', 'description', 'price', 'size', 'yt_url', 'position',)
 
     def signup(self, request, prop):

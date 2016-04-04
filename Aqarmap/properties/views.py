@@ -84,6 +84,7 @@ def addProperty(request):
                 request.POST, request.FILES, instance=properties)
 
             if prop_form_set.is_valid():
+                properties.owner=request.user
                 properties.save()
                 prop_form_set.save()
                 return HttpResponse("<h1 style=color:red>'" + title + "'has been saved into Property,Thank you!</h1>")
