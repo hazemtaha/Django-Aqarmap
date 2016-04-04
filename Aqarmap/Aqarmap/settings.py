@@ -111,7 +111,7 @@ DATABASES = {
         'NAME': 'django_aqarmap',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': 'hussien660',
+        'PASSWORD': 'iti',
     }
 }
 
@@ -209,4 +209,3 @@ CITIES_LIGHT_INCLUDE_CITY_TYPES = ['PPL', 'PPLA', 'PPLA2', 'PPLA3',
 # django crispy-forms related settings
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
-
