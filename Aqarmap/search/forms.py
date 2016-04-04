@@ -1,5 +1,3 @@
-from cProfile import label
-
 from django import forms
 from properties.models import PROPERTIES_CATEGORIES, PROPERTIES_TYPES
 from cities_light.models import City, Region

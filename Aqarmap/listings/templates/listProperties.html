@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+<div class="alert alert-info" role="alert">List my own properties</div> 
+<table class="table table-bordered table-hover">
+	<thead >
+            <tr class="info">
+                <th>Type </th>
+                <th>Property name</th>
+                <th>Announced date</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+	</thead>
+	<tbody>
+		{% for a in p %}
+			<tr>
+				<td>{{a.prop_type}}</td>
+				<td>{{a.title}}</td>
+				<td>{{a.created}}</td>
+
+				{% if a.status == 1 %}
+					<td>Active</td>
+				{% elif a.status == 0 %}
+					<td>Deactive</td>
+				{% endif %}
+
+				<td> <a href="{% url 'listings:editproperty' prop_id=a.id %}" ><button class="btn-success btn"> Edit </button> </a>
+                     <a href="{% url 'listings:deleteProperty' prop_id=a.id %}" ><button class="btn-danger btn"> Delete </button> </a>
+
+                </td>
+			</tr>	
+		
+		{% endfor %}
+	</tbody>
+</table>
+
+
+{% endblock content %}

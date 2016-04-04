@@ -50,6 +50,7 @@ def property_compare(request, first_prop, second_prop):
     # this will get all properties that have an image
     properties = PropertiesPhotos.objects.filter(
         prop__in=results).select_related('prop')
+    print(properties)
     context = {
         "results": properties,
     }

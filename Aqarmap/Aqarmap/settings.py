@@ -30,6 +30,9 @@ ALLOWED_HOSTS = []
 # email configuration
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
+# to test sending email by django it'll output the emails in the console
+# instead not valid for productions
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Application definition
 
@@ -179,7 +182,9 @@ AUTHENTICATION_BACKENDS = (
 
 # django-allauth
 SITE_ID = 2
-
+# to override the redirection after login or signup to custom url
+LOGIN_REDIRECT_URL = 'search:index'
+LOGOUT_URL = '/accounts/login/'
 SOCIALACCOUNT_PROVIDERS = \
     {'facebook':
      {'METHOD': 'oauth2',
@@ -196,6 +201,9 @@ SOCIALACCOUNT_PROVIDERS = \
       'VERIFIED_EMAIL': True,
       'VERSION': 'v2.4'
       }}
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = True
 # django cities-light related settings
 CITIES_LIGHT_TRANSLATION_LANGUAGES = ['en']
 CITIES_LIGHT_INCLUDE_COUNTRIES = ['EG']
@@ -205,4 +213,3 @@ CITIES_LIGHT_INCLUDE_CITY_TYPES = ['PPL', 'PPLA', 'PPLA2', 'PPLA3',
 # django crispy-forms related settings
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
-
