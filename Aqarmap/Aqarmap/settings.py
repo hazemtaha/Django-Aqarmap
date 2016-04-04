@@ -110,13 +110,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django_aqarmap',
         'HOST': 'localhost',
-<<<<<<< HEAD
         'USER': 'root',
         'PASSWORD': '0160',
-=======
-        'USER': 'ayyad',
-        'PASSWORD': 'sql',
->>>>>>> b227e480781697ae5f161d0add0fc75acb1aae77
     }
 }
 
