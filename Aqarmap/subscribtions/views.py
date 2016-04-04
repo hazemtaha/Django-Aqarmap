@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse, Http404
 from .models import Subscribtions
-from properties.models import Properties
+from properties.models import Properties, PropertiesPhotos
 from django.db.models import Q
 from cities_light.models import City, Region
 from subscribtions.forms import SubscribtionsForm
@@ -76,16 +76,18 @@ def delete_sub(request):
 
 @login_required
 def sub_results(request):
-	sub = Subscribtions.objects.filter(user_id=request.user)
-	subs = []
-	for subscribtion in sub:
-		prop = Properties.objects.filter(city=subscribtion.city,neighborhood=subscribtion.neighborhood,category=subscribtion.property_categories,prop_type=subscribtion.property_type,price__range=(subscribtion.min_price,subscribtion.max_price))
-		if prop in subs:
-			continue
-		else:	
-			subs.append(prop)
-	template = loader.get_template('results.html')
-	context = {'subs':subs,}
-	#print(subs[0].values('id'))
-	return HttpResponse(template.render(context, request))
+    sub = Subscribtions.objects.filter(user_id=request.user)
+    subs = []
+    for subscribtion in sub:
+        props = Properties.objects.filter(city=subscribtion.city,neighborhood=subscribtion.neighborhood,category=subscribtion.property_categories,prop_type=subscribtion.property_type,price__range=(subscribtion.min_price,subscribtion.max_price))
+        properties = PropertiesPhotos.objects.filter(prop__in=props).select_related('prop')
+      #if properties in subs:
+       # continue
+        #else:
+        subs.append(properties)
+        print(properties.__dict__)
+    template = loader.get_template('results.html')
+    context = {'subs':subs,}
+    #print(subs[0].values('id'))
+    return HttpResponse(template.render(context, request))
 
