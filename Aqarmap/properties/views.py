@@ -3,6 +3,7 @@ from django.http import HttpRequest, HttpResponse, Http404
 from django.core.exceptions import ValidationError
 
 from .models import Properties, PropertiesPhotos
+from django.contrib.auth.decorators import login_required
 
 from django.template import loader
 
@@ -19,36 +20,47 @@ register = template.Library()
 import re
 
 
+@login_required
 def prop_forSale(request):
 
     try:
         property_info = Properties.objects.filter(category='s')
-        prop_photos = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop').first()
-        context = {'property_info': property_info,'prop_photos':prop_photos, }
+        prop_photos = PropertiesPhotos.objects.filter(
+            prop__in=property_info).select_related('prop').first()
+        context = {'property_info': property_info,
+                   'prop_photos': prop_photos, }
     except Properties.DoesNotExist:
         return HttpResponse("There is no property to show")
 
     template = loader.get_template('properties/forSale.html')
     return HttpResponse(template.render(context, request))
 
+
+@login_required
 def prop_forRent(request):
 
     try:
         property_info = Properties.objects.filter(category='r')
-        prop_photos = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop').first()
-        context = {'property_info': property_info,'prop_photos':prop_photos,}
+        prop_photos = PropertiesPhotos.objects.filter(
+            prop__in=property_info).select_related('prop').first()
+        context = {'property_info': property_info,
+                   'prop_photos': prop_photos, }
     except Properties.DoesNotExist:
         return HttpResponse("There is no property to show")
 
     template = loader.get_template('properties/forRent.html')
     return HttpResponse(template.render(context, request))
 
+
+@login_required
 def list_u_prop(request):
-    
+
     try:
         property_info = Properties.objects.all()
-        prop_photos = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop').first()
-        context = {'property_info': property_info,'prop_photos':prop_photos,}
+        prop_photos = PropertiesPhotos.objects.filter(
+            prop__in=property_info).select_related('prop').first()
+        context = {'property_info': property_info,
+                   'prop_photos': prop_photos, }
     except Properties.DoesNotExist:
         return HttpResponse("There is no property to show")
 
@@ -57,14 +69,19 @@ def list_u_prop(request):
 
 
 # going to another page with the id
+@login_required
 def prop_details(request, property_id):
     prop_info = get_object_or_404(Properties, id=property_id)
     prop_photos = PropertiesPhotos.objects.filter(prop_id=property_id)
     property_info = Properties.objects.all()
-    prop_first = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop').first()
-    return render(request, 'properties/propDetails.html', {'prop_info': prop_info, 'value': property_id, 'prop_photos': prop_photos,'prop_first':prop_first,})
+    prop_first = PropertiesPhotos.objects.filter(
+        prop__in=property_info).select_related('prop').first()
+    return render(request, 'properties/propDetails.html', {'prop_info': prop_info, 'value': property_id, 'prop_photos': prop_photos, 'prop_first': prop_first, })
 
 # def addProperty(request, addProperty_id):
+
+
+@login_required
 def addProperty(request):
     # creating Form view
     # check first for the method if its post or get
@@ -84,7 +101,7 @@ def addProperty(request):
                 request.POST, request.FILES, instance=properties)
 
             if prop_form_set.is_valid():
-                properties.owner=request.user
+                properties.owner = request.user
                 properties.save()
                 prop_form_set.save()
                 return HttpResponse("<h1 style=color:red>'" + title + "'has been saved into Property,Thank you!</h1>")
