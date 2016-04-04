@@ -35,3 +35,11 @@ def EditProp(request, prop_id):
 
     return render(request, "editProperties.html", context)
 
+
+
+
+def delete(request,prop_id):
+
+    property = Properties.objects.get(id=prop_id)
+    property.delete()
+    return redirect('listings:listProperties')

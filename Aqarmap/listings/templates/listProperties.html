@@ -58,7 +58,10 @@
 					<td>Deactive</td>
 				{% endif %}
 
-				<td> <a href="{% url 'listings:editproperty' prop_id=a.id %}" ><button class="btn-success btn"> Edit </button> </a></td>
+				<td> <a href="{% url 'listings:editproperty' prop_id=a.id %}" ><button class="btn-success btn"> Edit </button> </a>
+                     <a href="{% url 'listings:deleteProperty' prop_id=a.id %}" ><button class="btn-danger btn"> Delete </button> </a>
+
+                </td>
 			</tr>	
 		
 		{% endfor %}
