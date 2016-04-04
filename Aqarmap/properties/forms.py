@@ -16,5 +16,6 @@ class PropertiesForm(forms.ModelForm):
     def signup(self, request, prop):
         prop.prop_photo = self.cleaned_data['prop_photo']
         prop.save()
+
 PropertiesFormSet = inlineformset_factory(
-    Properties, PropertiesPhotos, can_delete=False, exclude=['img_height', 'img_width', 'prop'])
+    Properties, PropertiesPhotos, extra=1, can_delete=False, fields=['prop_photo'])

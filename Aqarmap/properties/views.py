@@ -82,38 +82,60 @@ def prop_details(request, property_id):
 
 
 @login_required
-def addProperty(request):
-    # creating Form view
-    # check first for the method if its post or get
-    if request.method == "POST":
-        # we will construct the form with it's data if it's a POST
-        form = PropertiesForm(request.POST)
+def add_property(request):
+    form = PropertiesForm(request.POST or None)
+    if form.is_valid():
+        properties = form.save(commit=False)
+        prop_form_set = PropertiesFormSet(
+            request.POST, request.FILES, instance=properties)
 
-        # then check if the form is valid
-        if form.is_valid():
-            # process the data in the form.cleaned_data to return all the data
-            # then accessing it
-            values = form.cleaned_data
-            title = values['title']
-            properties = form.save(commit=False)
-
-            prop_form_set = PropertiesFormSet(
-                request.POST, request.FILES, instance=properties)
-
-            if prop_form_set.is_valid():
-                properties.owner = request.user
-                properties.save()
-                prop_form_set.save()
-                return redirect('listings:listProperties')
+        if prop_form_set.is_valid():
+            properties.owner = request.user
+            properties.save()
+            prop_form_set.save()
+            return redirect('listings:listProperties')
         else:
             prop_form_set = PropertiesFormSet(
                 request.POST or None, instance=Properties())
-            return HttpResponse("something went wrong")
     else:
-        form = PropertiesForm()
-        prop_form_set = PropertiesFormSet(
-            request.POST or None, instance=Properties())
-
-    template = loader.get_template('properties/addProperty.html')
+        prop_form_set = PropertiesFormSet()
     context = {'form': form, 'prop_form_set': prop_form_set, }
-    return HttpResponse(template.render(context, request))
+    return render(request, 'properties/addProperty.html', context)
+
+
+# @login_required
+# def addProperty(request):
+#     # creating Form view
+#     # check first for the method if its post or get
+#     if request.method == "POST":
+#         # we will construct the form with it's data if it's a POST
+#         form = PropertiesForm(request.POST)
+
+#         # then check if the form is valid
+#         if form.is_valid():
+#             # process the data in the form.cleaned_data to return all the data
+#             # then accessing it
+#             values = form.cleaned_data
+#             title = values['title']
+#             properties = form.save(commit=False)
+
+#             prop_form_set = PropertiesFormSet(
+#                 request.POST, request.FILES, instance=properties)
+
+#             if prop_form_set.is_valid():
+#                 properties.owner = request.user
+#                 properties.save()
+#                 prop_form_set.save()
+#                 return redirect('listings:listProperties')
+#         else:
+#             prop_form_set = PropertiesFormSet(
+#                 request.POST or None, instance=Properties())
+#             return HttpResponse("something went wrong")
+#     else:
+#         form = PropertiesForm()
+#         prop_form_set = PropertiesFormSet(
+#             request.POST or None, instance=Properties())
+
+#     template = loader.get_template('properties/addProperty.html')
+#     context = {'form': form, 'prop_form_set': prop_form_set, }
+#     return HttpResponse(template.render(context, request))

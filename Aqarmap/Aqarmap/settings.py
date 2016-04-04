@@ -111,7 +111,7 @@ DATABASES = {
         'NAME': 'django_aqarmap',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': 'hussien660',
+        'PASSWORD': 'iti',
     }
 }
 
