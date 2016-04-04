@@ -2,19 +2,98 @@
 <html>
 
 <head>
+    {% load staticfiles %}
     <title>{% block head_title %} Aqarmap {% endblock head_title %} </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="{% static 'css/search.css' %}"></script>
     {% block js %} {% endblock js %}
 </head>
 
-<body>
+<body bgcolor="#25383C">
+      <nav class="navbar navbar-default">
+                     <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">AQAR MAP ITI</a>
+                    </div>
+                         <ul class="nav navbar-nav">
+                              <li class="active"><a href="#">Home</a></li>
+                               <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Property
+                                        <span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                              <li><a href="#">Add New Property</a></li>
+                                              <li><a href="properties/propertiesforsale">List Your Properties for sale</a></li>
+                                              <li><a href="#">List Your Properties for rent</a></li>
+                                              <li><a href="#">List All Your Properties</a></li>
+                                            </ul>
+                                            </li>
+
+
+                              <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
+                                        <span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                              <li><a href="#">Add New Project</a></li>
+                                              <li><a href="#">List All Your Projects</a></li>
+                                            </ul>
+                                            </li>
+
+
+                              <li><a href="#">Profile</a></li>
+                              <li><a href="{% url 'subscribtions:sub_results' %}">Subscribtions Results</a></li>
+                         </ul>
+                    <ul class="nav navbar-nav navbar-right">
+    
+                    <!-- Search Box -->
+                        
+                    <!-- Endo Of search -->
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        </ul>
+
+                    </div>
+                </nav>
+    
+                <!-- Search Box -->
+                                <div align="right">
+                                    <form class="navbar-form" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control pull-right" style="width: 300px; margin-right: 35px, border: 1px solid black; background-color: #e5e5e5;" placeholder="Search">
+                                        <span class="input-group-btn">
+                                            <button type="reset" class="btn btn-default">
+                                                <span class="glyphicon glyphicon-remove">
+                                                    <span class="sr-only">Close</span>
+                                                </span>
+                                            </button>
+                                            <button type="submit" class="btn btn-default">
+                                                <span class="glyphicon glyphicon-search">
+                                                    <span class="sr-only">Search</span>
+                                                </span>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </form>
+                </div>
+                <!-- End OF Search Box -->
     <div class="container">
-        {% block content %} {% endblock content %}
+        {% block content %} 
+
+        {% endblock content %}
     </div>
+
+ <footer>
+     <nav class="navbar navbar-default">
+                     <h1 align="center">AQAR MAP ITI</h1>
+                     <p align="center">Contact information: aqarmapiti@ymail.com</p>
+                                   </nav>
+    
+      
+
+ </footer>   
 </body>
 
 </html>
