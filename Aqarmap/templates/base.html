@@ -50,7 +50,7 @@
                         <a class="navbar-brand" href="{% url 'search:index' %}">AQAR MAP ITI</a>
                     </div>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="{% url 'search:index' %}">Home</a></li>
+                        <li><a href="{% url 'search:index' %}">Home</a></li>
                         {% if request.user.is_authenticated %}
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Property
@@ -85,7 +85,15 @@
                                 <li><a href="#">List All Your Subscribtions</a></li>
                             </ul>
                         </li>
-                        <li><a href="{% url 'settings:user_setting' %}">Settings</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings
+                                        <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'settings:user_setting' %}">Edit Profile</a></li>
+                                <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
+                                <li><a href="{% url 'account_email' %}">Edit Emails</a></li>
+                            </ul>
+                        </li>
                         {% endif %}
                     </ul>
                     <ul class="nav navbar-nav navbar-right">

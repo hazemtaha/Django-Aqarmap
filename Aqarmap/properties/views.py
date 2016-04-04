@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpRequest, HttpResponse, Http404
 from django.core.exceptions import ValidationError
 
@@ -104,7 +104,7 @@ def addProperty(request):
                 properties.owner = request.user
                 properties.save()
                 prop_form_set.save()
-                return HttpResponse("<h1 style=color:red>'" + title + "'has been saved into Property,Thank you!</h1>")
+                return redirect('listings:listProperties')
         else:
             prop_form_set = PropertiesFormSet(
                 request.POST or None, instance=Properties())

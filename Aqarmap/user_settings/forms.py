@@ -10,7 +10,7 @@ class UserSettingForm(forms.ModelForm):
 
     class Meta:
         model = UserProfile
-        fields = ['username', 'email', 'first_name', 'last_name',
+        fields = ['first_name', 'last_name',
                   'gender', 'country', 'default_currency',
                   'phone_number', 'account_type', '_image']
 
