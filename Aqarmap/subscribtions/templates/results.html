@@ -1,4 +1,36 @@
 {% extends "base.html" %} {% load humanize %} {% load staticfiles %}
+{% block js %}
+    <script src='{% static "search/js/results-utils.js" %}'></script>
+{% endblock js %}
 {% block content %}
 <div class="row">
     <h1>Search Results</h1>
+    <hr> {% for result in subs %}
+    	{% for subResult in result.values %}
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="thumbnail">
+            <img src="{{ result.prop_photo.url }}" alt="">
+            <div class="caption">
+                <h2>{{ subResult.title }} | <small>{{ subResult.created|naturaltime }}</small></h2>
+                <small>Type : {{ subResult.prop_type }}</small> | <small> Size : {{ subResult.size }}<small> M</small> | Price : {{ subResult.price|intcomma }}<small> EGP</small></small>
+                <hr>
+                <div class="well well-sm">
+                    <p>
+                        {{ subResult.description | truncatechars:100}}
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        
+                     
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endfor %}
+
+
+{% endblock content %}
+</div>
