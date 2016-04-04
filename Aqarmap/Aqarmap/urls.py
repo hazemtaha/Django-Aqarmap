@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^subscribtions/', include('subscribtions.urls', namespace='subscribtions')),
     url(r'^search/', include('search.urls', namespace='search')),
     url(r'^properties/', include('properties.urls', namespace='properties')),
+    url(r'^listings/', include('listings.urls', namespace='listings')),
     url(r'^settings/', include('user_settings.urls', namespace='settings')),
     url(r'^', include('search.urls', namespace='search')),
 

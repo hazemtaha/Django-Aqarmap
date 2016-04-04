@@ -1,0 +1,174 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit my property</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/jquery-1.11.2.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Aqar Map ITI</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="">Add Property</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">list properties
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">For sale</a></li>
+                    <li><a href="#">For rent</a></li>
+                    <li><a href="#">both</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<div class="alert alert-info" role="alert">Edit my property</div>
+
+{% block content %}
+
+<form method="POST" class="post-form form-horizontal" action="{{ request.get_full_path }}" enctype="multipart/form-data"
+      role="form">
+
+    {% csrf_token %}
+    <!-- Property Description -->
+    <div class="container">
+
+        <h3><code>Property Description</code></h3>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="category">User:</label>
+            <div class="col-sm-10">
+                {{ form.owner }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="category">Category:</label>
+            <div class="col-sm-10">
+                {{ form.category }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="prop_type">Type:</label>
+            <div class="col-sm-10">
+                {{ form.prop_type }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="size">Size:</label>
+            <div class="col-sm-10">
+                {{ form.size }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="price">Price:</label>
+            <div class="col-sm-10">
+                {{ form.price }}
+            </div>
+        </div>
+    </div>
+    <!-- End Property Description -->
+
+    <!-- Property Information -->
+    <div class="container">
+        <h3><code>Property Information</code></h3>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="title">Title:</label>
+            <div class="col-sm-10">
+                {{ form.title }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="description">Description:</label>
+            <div class="col-sm-10">
+                {{ form.description }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="city">City:</label>
+            <div class="col-sm-10">
+                {{ form.city }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="neighborhood">Neighborhood:</label>
+            <div class="col-sm-10">
+                {{ form.neighborhood }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="yt_url">YouTube Url (Optional) :</label>
+            <div class="col-sm-10">
+                {{ form.yt_url }}
+            </div>
+        </div>
+
+    </div>
+    <!-- End Property Information -->
+
+    <!-- Marking position on the map -->
+    <div class="container">
+        <h3><code>Mark Your Property Location on the map</code></h3>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="position">Position:</label>
+            <div class="col-sm-10">
+                {{ form.media }}
+                {{ form.position }}
+                {{ form.position.latitude }}
+                {{ form.position.longitude }}
+            </div>
+        </div>
+    </div>
+    <!-- End Marking position on the map -->
+
+
+    <!-- Saving multiple photo -->
+    <!-- 	<div class="container">
+            <h3><code>Add your Photos</code></h3>
+
+            <P><code>Add your Basic Photo</code></P>
+            <div class="form-group">
+                    <label class="control-label col-sm-2" for="position">Basic Photo:</label>
+                    <div class="col-sm-10">
+                    {{ form.basic_photo }}
+                    </div>
+            </div> -->
+
+
+    <!--<div class="form-group">-->
+        <!--<label class="control-label col-sm-2" for="position">Photos:</label>-->
+        <!--<div class="col-sm-10">-->
+            <!--{{ prop_form_set.as_p }}-->
+        <!--</div>-->
+    <!--</div>-->
+    </div>
+    <!-- EndSaving multiple photo -->
+
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="save btn btn-success">Save</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}
+
+</body>
+</html>

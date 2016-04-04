@@ -4,16 +4,44 @@
 <head>
     {% load staticfiles %}
     <title>{% block head_title %} Aqarmap {% endblock head_title %} </title>
+    <style type="text/css">
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#container {
+   min-height:100%;
+   position:relative;
+}
+#body {
+   padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
+}
+#footer {
+   position:relative;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:#6cf;
+}
+
+
+    </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="{% static 'css/search.css' %}"></script>
     {% block js %} {% endblock js %}
 </head>
 
 <body bgcolor="#25383C">
+<div id="container">
+
+    <div id="header">
+<!-- Header -->
       <nav class="navbar navbar-default">
                      <div class="container-fluid">
                     <div class="navbar-header">
@@ -65,34 +93,21 @@
 
                     </div>
                 </nav>
-    
-                <!-- Search Box -->
-                                <div align="right">
-                                    <form class="navbar-form" role="search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control pull-right" style="width: 300px; margin-right: 35px, border: 1px solid black; background-color: #e5e5e5;" placeholder="Search">
-                                        <span class="input-group-btn">
-                                            <button type="reset" class="btn btn-default">
-                                                <span class="glyphicon glyphicon-remove">
-                                                    <span class="sr-only">Close</span>
-                                                </span>
-                                            </button>
-                                            <button type="submit" class="btn btn-default">
-                                                <span class="glyphicon glyphicon-search">
-                                                    <span class="sr-only">Search</span>
-                                                </span>
-                                            </button>
-                                        </span>
-                                    </div>
-                                </form>
-                </div>
-                <!-- End OF Search Box -->
+</div>
+<!-- Header Navvvvvvv -->
+
+<!-- Body -->
+<div id="body">
     <div class="container">
         {% block content %} 
 
         {% endblock content %}
     </div>
-
+</div>    
+<!-- End of body -->
+ 
+<!-- Footer -->
+ <div id="footer">
  <footer>
      <nav class="navbar navbar-default">
                      <h1 align="center">AQAR MAP ITI</h1>
@@ -101,7 +116,10 @@
     
       
 
- </footer>   
+ </footer>
+</div>
+<!-- End of Footer -->
+</div>    
 </body>
 
 </html>
