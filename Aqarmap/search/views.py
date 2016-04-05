@@ -30,7 +30,7 @@ def search_results(request):
         # this will get all properties that have an image
         properties = PropertiesPhotos.objects.filter(
             prop__in=results).select_related('prop')
-        paginator = Paginator(properties, 25)
+        paginator = Paginator(properties, 3)
         page = request.GET.get('page')
         try:
             props = paginator.page(page)
