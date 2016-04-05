@@ -27,12 +27,29 @@ def prop_forSale(request):
 
     try:
         property_info = Properties.objects.filter(category='s')
-        prop_photos = PropertiesPhotos.objects.filter(
-            prop__in=property_info).select_related('prop').first()
-        context = {'property_info': property_info,
-                   'prop_photos': prop_photos, }
+        prop_photos = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop')
+            
+        #Dealing with the paginators>>>>>>>>>>>>>>>>>>>>>>>
+        paginator = Paginator(prop_photos, 3) # show 3 property per page
+        page = request.GET.get('page')
+
+        try: 
+            props_pagin = paginator.page(page)
+        except PageNotAnInteger:
+            #if page is not int > deliver the first page only
+            props_pagin = paginator.page(1)
+        except EmptyPage:
+            #if page is out of range (e.g), deliver last page of result
+            props_pagin = paginator.page(paginator.num_pages)       
+
+
+        #End of paginator>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        context = {'property_info': property_info,'prop_photos':prop_photos,'props_pagin':props_pagin,}
+        
+
     except Properties.DoesNotExist:
         return HttpResponse("There is no property to show")
+
 
     template = loader.get_template('properties/forSale.html')
     return HttpResponse(template.render(context, request))
@@ -43,12 +60,29 @@ def prop_forRent(request):
 
     try:
         property_info = Properties.objects.filter(category='r')
-        prop_photos = PropertiesPhotos.objects.filter(
-            prop__in=property_info).select_related('prop').first()
-        context = {'property_info': property_info,
-                   'prop_photos': prop_photos, }
+        prop_photos = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop')
+            
+        #Dealing with the paginators>>>>>>>>>>>>>>>>>>>>>>>
+        paginator = Paginator(prop_photos, 3) # show 3 property per page
+        page = request.GET.get('page')
+
+        try: 
+            props_pagin = paginator.page(page)
+        except PageNotAnInteger:
+            #if page is not int > deliver the first page only
+            props_pagin = paginator.page(1)
+        except EmptyPage:
+            #if page is out of range (e.g), deliver last page of result
+            props_pagin = paginator.page(paginator.num_pages)       
+
+
+        #End of paginator>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        context = {'property_info': property_info,'prop_photos':prop_photos,'props_pagin':props_pagin,}
+        
+
     except Properties.DoesNotExist:
         return HttpResponse("There is no property to show")
+
 
     template = loader.get_template('properties/forRent.html')
     return HttpResponse(template.render(context, request))

@@ -14,23 +14,23 @@
   <div class="col-sm-1"></div>
   <div class="col-sm-10">
 
-  {% for value in property_info %}
+  {% for value in props_pagin %}
 
   <div class="col-sm-4">
 
   <div class="panel panel-warning">
          <div class="panel-heading" align="center">
-         <h4>{{value.title}}</h4>
+         <h4>{{value.prop.title}}</h4>
          </div>
          <div class="panel-body">
-          <img src="{{prop_photos.prop_photo.url}}" height="200" width="350">
+          <img src="{{value.prop_photo.url}}" height="250" width="250">
          </div>
          <div class="panel-footer">
-           <h4><code><b>{{value.city}}</b></code></h4>
+           <h4><code><b>{{value.prop.city}}</b></code></h4>
     
            <h5><code><b>{{value.neighborhood}}</b></code></h5> 
 
-           <h3><b>{{value.price}}</b>
+           <h3><b>{{value.prop.price}}</b>
            <p align="right">
            
            <a href="{% url 'properties:properties_details' property_id=value.id %}" class="btn btn-primary">Details</a>
@@ -46,5 +46,20 @@
   <div class="col-sm-1"></div>
    
 </div>
+<div class="pagination col-sm-12">
+    <span class="step-links col-sm-offset-6">
+        {% if props_pagin.has_previous %}
+            <a href="?page={{ props_pagin.previous_page_number }}">previous</a>
+        {% endif %}
 
+        <span class="current">
+            Page {{ props_pagin.number }} of {{ props_pagin.paginator.num_pages }}.
+        </span>
+
+        {% if props_pagin.has_next %}
+            <a href="?page={{ props_pagin.next_page_number }}">next</a>
+        {% endif %}
+
+    </span>
+</div>
 {% endblock content %}
