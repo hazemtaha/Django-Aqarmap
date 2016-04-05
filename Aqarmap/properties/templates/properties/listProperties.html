@@ -48,4 +48,21 @@
    
 </div>
 
+<div class="pagination col-sm-12">
+    <span class="step-links col-sm-offset-6">
+        {% if props_pagin.has_previous %}
+            <a href="?page={{ props_pagin.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ props_pagin.number }} of {{ props_pagin.paginator.num_pages }}.
+        </span>
+
+        {% if props_pagin.has_next %}
+            <a href="?page={{ props_pagin.next_page_number }}">next</a>
+        {% endif %}
+
+    </span>
+</div>
+
 {% endblock content %}
