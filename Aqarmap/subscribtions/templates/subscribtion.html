@@ -8,7 +8,7 @@
 
 <h1>Subscribtions</h1>
     <hr>
-    <table class="table-striped"><tr><td>{% crispy form %}</td></tr>
+    <table class="table table-bordered table-hover"><tr><td>{% crispy form %}</td></tr>
     </table>
 
 	<hr>
@@ -16,9 +16,9 @@
         
     <div class="row">
     <h1>Your Subscribtions</h1>
-    <table class="table-striped">
+    <table class="table table-bordered table-hover">
     <tr>
-    <th>City</th><th>Neightborhood</th><th>Property Type</th><th>Property Category</th><th>Min Price</th><th>Max Price</th><th>Status</th></tr>
+    <th>City</th><th>Neightborhood</th><th>Property Type</th><th>Property Category</th><th>Min Price</th><th>Max Price</th><th>Status</th><th>Delete</th></tr>
     {% for value in subs %}
     <tr>
     <td><span>{{value.city}}</span></td>
