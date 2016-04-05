@@ -1,4 +1,51 @@
 {% extends "base.html" %} {% load humanize %} {% load staticfiles %}
+{% block js %}
+    <script src='{% static "search/js/results-utils.js" %}'></script>
+{% endblock js %}
 {% block content %}
 <div class="row">
     <h1>Search Results</h1>
+    <hr> {% for result in subs %}
+    	{% for subResult in result %}
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="thumbnail">
+            <img src="{{ subResult.prop_photo.url }}" alt="">
+            <div class="caption">
+                <h2>{{ subResult.prop.title }} | <small>{{ subResult.prop.created|naturaltime }}</small></h2>
+                <small>Type : {{ subResult.prop.prop_type }}</small> | <small> Size : {{ subResult.prop.size }}<small> M</small> | Price : {{ subResult.prop.price|intcomma }}<small> EGP</small></small>
+                <hr>
+                <div class="well well-sm">
+                    <p>
+                        {{ subResult.prop.description | truncatechars:100}}
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <a href="{% url 'properties:properties_details' property_id=subResult.id %}" class="btn btn-primary">Detail</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endfor %}
+
+
+</div>
+<div class="pagination">
+    <span class="step-links">
+        {% if subs.has_previous %}
+            <a href="?page={{ subs.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ subs.number }} of {{ subs.paginator.num_pages }}.
+        </span>
+
+        {% if subs.has_next %}
+            <a href="?page={{ subs.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock content %}

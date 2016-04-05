@@ -1,4 +1,6 @@
+{% extends "base.html" %}
 {% load staticfiles %}
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,8 +36,10 @@
 
 <div class="alert alert-info" role="alert">List my own properties</div>
 
+=======
+>>>>>>> fc5467675904cceb75ee4f955f962b95c6f1f6d9
 {% block content %}
-
+<div class="alert alert-info" role="alert">List my own properties</div> 
 <table class="table table-bordered table-hover">
 	<thead >
             <tr class="info">
@@ -91,6 +95,4 @@
         </div>
 
 
-{% endblock %}
-
-</body>
+{% endblock content %}

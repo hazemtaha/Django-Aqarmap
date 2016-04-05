@@ -11,7 +11,9 @@
     <table class="table-striped"><tr><td>{% crispy form %}</td></tr>
     </table>
 
-	
+	<hr>
+    {% if subs %}
+        
     <div class="row">
     <h1>Your Subscribtions</h1>
     <table class="table-striped">
@@ -31,11 +33,12 @@
     {% endif %}
     </td>
     <td><a href="{% url 'subscribtions:delete_sub' %}?sub_id={{ value.id }}" class="btn btn-danger">Delete</a></td>
-	</tr>
-    	{% endfor %}
+    </tr>
+        {% endfor %}
     </table>
 </div>
 
+    {% endif %}
 {% endblock content %}
 </div>
 
