@@ -111,7 +111,7 @@ DATABASES = {
         'NAME': 'django_aqarmap',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': '0160',
+        'PASSWORD': 'iti',
     }
 }
 
@@ -184,6 +184,7 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 2
 # to override the redirection after login or signup to custom url
 LOGIN_REDIRECT_URL = 'search:index'
+LOGOUT_URL = '/accounts/login/'
 SOCIALACCOUNT_PROVIDERS = \
     {'facebook':
      {'METHOD': 'oauth2',
@@ -200,6 +201,9 @@ SOCIALACCOUNT_PROVIDERS = \
       'VERIFIED_EMAIL': True,
       'VERSION': 'v2.4'
       }}
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = True
 # django cities-light related settings
 CITIES_LIGHT_TRANSLATION_LANGUAGES = ['en']
 CITIES_LIGHT_INCLUDE_COUNTRIES = ['EG']

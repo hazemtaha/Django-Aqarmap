@@ -5,29 +5,32 @@
     {% load staticfiles %}
     <title>{% block head_title %} Aqarmap {% endblock head_title %} </title>
     <style type="text/css">
-html,
-body {
-   margin:0;
-   padding:0;
-   height:100%;
-}
-#container {
-   min-height:100%;
-   position:relative;
-}
-#body {
-   padding:10px;
-   padding-bottom:60px;   /* Height of the footer */
-}
-#footer {
-   position:relative;
-   bottom:0;
-   width:100%;
-   height:60px;   /* Height of the footer */
-   background:#6cf;
-}
-
-
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    
+    #container {
+        min-height: 100%;
+        position: relative;
+    }
+    
+    #body {
+        padding: 10px;
+        padding-bottom: 60px;
+        /* Height of the footer */
+    }
+    
+    #footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        /* Height of the footer */
+        background: #6cf;
+    }
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Optional theme -->
@@ -38,106 +41,93 @@ body {
 </head>
 
 <body bgcolor="#25383C">
-<div id="container">
-
-    <div id="header">
-<!-- Header -->
-      <nav class="navbar navbar-default">
-                     <div class="container-fluid">
+    <div id="container">
+        <div id="header">
+            <!-- Header -->
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#">AQAR MAP ITI</a>
+                        <a class="navbar-brand" href="{% url 'search:index' %}">AQAR MAP ITI</a>
                     </div>
-                         <ul class="nav navbar-nav">
-                              <li class="active"><a href="#">Home</a></li>
-                               <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Property
+                    <ul class="nav navbar-nav">
+                        <li><a href="{% url 'search:index' %}">Home</a></li>
+                        {% if request.user.is_authenticated %}
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Property
                                         <span class="caret"></span></a>
-                                            <ul class="dropdown-menu">
-                                              <li><a href="#">Add New Property</a></li>
-                                              <li><a href="properties/propertiesforsale">List Your Properties for sale</a></li>
-                                              <li><a href="#">List Your Properties for rent</a></li>
-                                              <li><a href="#">List All Your Properties</a></li>
-                                            </ul>
-                                            </li>
-
-
-                              <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'properties:allproperties' %}">List All Properties</a></li>
+                                <li><a href="{% url 'properties:propertiesforsale' %}">Properties for sale</a></li>
+                                <li><a href="{% url 'properties:propertiesforrent' %}">Properties for rent</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
                                         <span class="caret"></span></a>
-                                            <ul class="dropdown-menu">
-                                              <li><a href="#">Add New Project</a></li>
-                                              <li><a href="#">List All Your Projects</a></li>
-                                            </ul>
-                                            </li>
-
-                  
-
-                              <li><a href="#">Profile</a></li>
-                              <li><a href="{% url 'subscribtions:sub_results' %}">Subscribtions Results</a></li>
-                         
-                  
-
-                    <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">My Listing
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Add Project</a></li>
+                                <li><a href="#">List Projects</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Listings
                                         <span class="caret"></span></a>
-                                            <ul class="dropdown-menu">
-                                              <li><a href="#">Add New Property</a></li>
-                                              <li><a href="#">List All Your Properties</a></li>
-                                            </ul>
-                                            </li>
-
-  
-
-                  <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Subscribtions
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'properties:addproperty' %}">Add Property</a></li>
+                                <li><a href="{% url 'listings:listProperties' %}">My Listings</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Subscribtions
                                         <span class="caret"></span></a>
-                                            <ul class="dropdown-menu">
-                                              <li><a href="#">Add New Subscribtion</a></li>
-                                              <li><a href="#">List All Your Subscribtions</a></li>
-                                            </ul>
-                                            </li>
-
-
-                  </ul>
-
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'subscribtions:sub_results' %}">Feeds</a></li>
+                                <li><a href="{% url 'subscribtions:subscribtions' %}">Add Subscribtion</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings
+                                        <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'settings:user_setting' %}">Edit Profile</a></li>
+                                <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
+                                <li><a href="{% url 'account_email' %}">Edit Emails</a></li>
+                            </ul>
+                        </li>
+                        {% endif %}
+                    </ul>
                     <ul class="nav navbar-nav navbar-right">
-    
-                    <!-- Search Box -->
-                        
-                    <!-- Endo Of search -->
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                        </ul>
-
-                    </div>
+                        <!-- Search Box -->
+                        <!-- Endo Of search -->
+                        {% if request.user.is_authenticated %}
+                        <li><a href="{% url 'account_logout' %}"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                        {% else %}
+                        <li><a href="{% url 'account_signup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="{% url 'account_login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Header Navvvvvvv -->
+        <!-- Body -->
+        <div id="body">
+            <div class="container">
+                {% block content %} {% endblock content %}
+            </div>
+        </div>
+        <!-- End of body -->
+        <!-- Footer -->
+        <div id="footer">
+            <footer>
+                <nav class="navbar navbar-default">
+                    <h1 align="center">AQAR MAP ITI</h1>
+                    <p align="center">Contact information: aqarmapiti@ymail.com</p>
                 </nav>
-</div>
-<!-- Header Navvvvvvv -->
-
-<!-- Body -->
-<div id="body">
-    <div class="container">
-        {% block content %} 
-
-        {% endblock content %}
+            </footer>
+        </div>
+        <!-- End of Footer -->
     </div>
-</div>    
-<!-- End of body -->
- 
-<!-- Footer -->
- <div id="footer">
- <footer>
-     <nav class="navbar navbar-default">
-                     <h1 align="center">AQAR MAP ITI</h1>
-                     <p align="center">Contact information: aqarmapiti@ymail.com</p>
-                                   </nav>
-    
-      
-
- </footer>
-</div>
-<!-- End of Footer -->
-</div>    
 </body>
 
 </html>

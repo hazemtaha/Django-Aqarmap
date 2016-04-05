@@ -5,6 +5,7 @@ from django.shortcuts import redirect
 from properties.models import Properties
 from properties.forms import PropertiesForm
 from django.template import loader
+from django.contrib.auth.decorators import login_required
 
 import urlparse
 from django import template
@@ -13,7 +14,7 @@ from django.conf import settings
 
 # Create your views here.
 
-
+@login_required
 def listProperties(request):
     # template = loader.get_template('listProperties.html')
 
@@ -22,6 +23,7 @@ def listProperties(request):
     return render(request, "listProperties.html", context)
 
 
+@login_required
 def EditProp(request, prop_id):
     properties = Properties.objects.get(id=prop_id)
     if request.method == 'GET':
@@ -36,9 +38,8 @@ def EditProp(request, prop_id):
     return render(request, "editProperties.html", context)
 
 
-
-
-def delete(request,prop_id):
+@login_required
+def delete(request, prop_id):
 
     property = Properties.objects.get(id=prop_id)
     property.delete()

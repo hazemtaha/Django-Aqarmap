@@ -1,7 +1,12 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpRequest, HttpResponse, Http404
 from django.core.exceptions import ValidationError
 from .models import Properties, PropertiesPhotos
+<<<<<<< HEAD
+=======
+from django.contrib.auth.decorators import login_required
+
+>>>>>>> db600f5387db918afcbd4f1365a866bd912a0727
 from django.template import loader
 # import the forms here
 from django.forms import inlineformset_factory, BaseInlineFormSet
@@ -20,34 +25,44 @@ register = template.Library()
 import re
 
 
+@login_required
 def prop_forSale(request):
 
     try:
         property_info = Properties.objects.filter(category='s')
-        prop_photos = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop').first()
-        context = {'property_info': property_info,'prop_photos':prop_photos, }
+        prop_photos = PropertiesPhotos.objects.filter(
+            prop__in=property_info).select_related('prop').first()
+        context = {'property_info': property_info,
+                   'prop_photos': prop_photos, }
     except Properties.DoesNotExist:
         return HttpResponse("There is no property to show")
 
     template = loader.get_template('properties/forSale.html')
     return HttpResponse(template.render(context, request))
 
+
+@login_required
 def prop_forRent(request):
 
     try:
         property_info = Properties.objects.filter(category='r')
-        prop_photos = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop').first()
-        context = {'property_info': property_info,'prop_photos':prop_photos,}
+        prop_photos = PropertiesPhotos.objects.filter(
+            prop__in=property_info).select_related('prop').first()
+        context = {'property_info': property_info,
+                   'prop_photos': prop_photos, }
     except Properties.DoesNotExist:
         return HttpResponse("There is no property to show")
 
     template = loader.get_template('properties/forRent.html')
     return HttpResponse(template.render(context, request))
 
+
+@login_required
 def list_u_prop(request):
-    
+
     try:
         property_info = Properties.objects.all()
+<<<<<<< HEAD
         prop_photos = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop').first()
             
         #Dealing with the paginators>>>>>>>>>>>>>>>>>>>>>>>
@@ -66,6 +81,12 @@ def list_u_prop(request):
 
         #End of paginator>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         context = {'property_info': property_info,'prop_photos':prop_photos,'props_pagin':props_pagin,}
+=======
+        prop_photos = PropertiesPhotos.objects.filter(
+            prop__in=property_info).select_related('prop').first()
+        context = {'property_info': property_info,
+                   'prop_photos': prop_photos, }
+>>>>>>> db600f5387db918afcbd4f1365a866bd912a0727
     except Properties.DoesNotExist:
         return HttpResponse("There is no property to show")
 
@@ -74,46 +95,73 @@ def list_u_prop(request):
 
 
 # going to another page with the id
+@login_required
 def prop_details(request, property_id):
     prop_info = get_object_or_404(Properties, id=property_id)
     prop_photos = PropertiesPhotos.objects.filter(prop_id=property_id)
     property_info = Properties.objects.all()
-    prop_first = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop').first()
-    return render(request, 'properties/propDetails.html', {'prop_info': prop_info, 'value': property_id, 'prop_photos': prop_photos,'prop_first':prop_first,})
+    prop_first = PropertiesPhotos.objects.filter(
+        prop__in=property_info).select_related('prop').first()
+    return render(request, 'properties/propDetails.html', {'prop_info': prop_info, 'value': property_id, 'prop_photos': prop_photos, 'prop_first': prop_first, })
 
 # def addProperty(request, addProperty_id):
-def addProperty(request):
-    # creating Form view
-    # check first for the method if its post or get
-    if request.method == "POST":
-        # we will construct the form with it's data if it's a POST
-        form = PropertiesForm(request.POST)
 
-        # then check if the form is valid
-        if form.is_valid():
-            # process the data in the form.cleaned_data to return all the data
-            # then accessing it
-            values = form.cleaned_data
-            title = values['title']
-            properties = form.save(commit=False)
 
-            prop_form_set = PropertiesFormSet(
-                request.POST, request.FILES, instance=properties)
+@login_required
+def add_property(request):
+    form = PropertiesForm(request.POST or None)
+    if form.is_valid():
+        properties = form.save(commit=False)
+        prop_form_set = PropertiesFormSet(
+            request.POST, request.FILES, instance=properties)
 
-            if prop_form_set.is_valid():
-                properties.owner=request.user
-                properties.save()
-                prop_form_set.save()
-                return HttpResponse("<h1 style=color:red>'" + title + "'has been saved into Property,Thank you!</h1>")
+        if prop_form_set.is_valid():
+            properties.owner = request.user
+            properties.save()
+            prop_form_set.save()
+            return redirect('listings:listProperties')
         else:
             prop_form_set = PropertiesFormSet(
                 request.POST or None, instance=Properties())
-            return HttpResponse("something went wrong")
     else:
-        form = PropertiesForm()
-        prop_form_set = PropertiesFormSet(
-            request.POST or None, instance=Properties())
-
-    template = loader.get_template('properties/addProperty.html')
+        prop_form_set = PropertiesFormSet()
     context = {'form': form, 'prop_form_set': prop_form_set, }
-    return HttpResponse(template.render(context, request))
+    return render(request, 'properties/addProperty.html', context)
+
+
+# @login_required
+# def addProperty(request):
+#     # creating Form view
+#     # check first for the method if its post or get
+#     if request.method == "POST":
+#         # we will construct the form with it's data if it's a POST
+#         form = PropertiesForm(request.POST)
+
+#         # then check if the form is valid
+#         if form.is_valid():
+#             # process the data in the form.cleaned_data to return all the data
+#             # then accessing it
+#             values = form.cleaned_data
+#             title = values['title']
+#             properties = form.save(commit=False)
+
+#             prop_form_set = PropertiesFormSet(
+#                 request.POST, request.FILES, instance=properties)
+
+#             if prop_form_set.is_valid():
+#                 properties.owner = request.user
+#                 properties.save()
+#                 prop_form_set.save()
+#                 return redirect('listings:listProperties')
+#         else:
+#             prop_form_set = PropertiesFormSet(
+#                 request.POST or None, instance=Properties())
+#             return HttpResponse("something went wrong")
+#     else:
+#         form = PropertiesForm()
+#         prop_form_set = PropertiesFormSet(
+#             request.POST or None, instance=Properties())
+
+#     template = loader.get_template('properties/addProperty.html')
+#     context = {'form': form, 'prop_form_set': prop_form_set, }
+#     return HttpResponse(template.render(context, request))

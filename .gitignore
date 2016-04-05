@@ -97,3 +97,14 @@ ENV/
 
 # Spyder project settings
 .spyderproject
+
+### Linux ###
+*~
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# ignore media files
+*.jpg
+*.png
+*.gif
