@@ -20,7 +20,7 @@ def listProperties(request):
     # template = loader.get_template('listProperties.html')
 
     p = Properties.objects.filter(owner_id=request.user.id)
-    paginator = Paginator(p,1)
+    paginator = Paginator(p,5)
 
     page = request.GET.get('page')
     try:
@@ -64,3 +64,19 @@ def delete(request, prop_id):
     property = Properties.objects.get(id=prop_id)
     property.delete()
     return redirect('listings:listProperties')
+
+@login_required
+def setActive(request, prop_id):
+    property = Properties.objects.get(id=prop_id)
+    property.status = True
+    property.save()
+    return redirect('listings:listProperties')
+
+
+@login_required
+def setDeactive(request, prop_id):
+    property = Properties.objects.get(id=prop_id)
+    property.status = False
+    property.save()
+    return redirect('listings:listProperties')
+

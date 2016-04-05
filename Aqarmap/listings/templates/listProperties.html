@@ -20,9 +20,9 @@
 				<td>{{a.created}}</td>
 
 				{% if a.status == 1 %}
-					<td>Active</td>
+					<td><a href="{% url 'listings:deactiveProperty' prop_id=a.id %}" ><button class="btn-danger btn"> Deactivate </button> </a></td>
 				{% elif a.status == 0 %}
-					<td>Deactive</td>
+					<td><a href="{% url 'listings:activeProperty' prop_id=a.id %}" ><button class="btn-success btn"> Activate </button> </a></td>
 				{% endif %}
 
 				<td> <a href="{% url 'listings:editproperty' prop_id=a.id %}" ><button class="btn-success btn"> Edit </button> </a>
