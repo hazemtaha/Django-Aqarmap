@@ -30,6 +30,9 @@ ALLOWED_HOSTS = []
 # email configuration
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
+# to test sending email by django it'll output the emails in the console
+# instead not valid for productions
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Application definition
 
@@ -108,7 +111,7 @@ DATABASES = {
         'NAME': 'django_aqarmap',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': 'iti',
+        'PASSWORD': '0160',
     }
 }
 
@@ -179,7 +182,8 @@ AUTHENTICATION_BACKENDS = (
 
 # django-allauth
 SITE_ID = 2
-
+# to override the redirection after login or signup to custom url
+LOGIN_REDIRECT_URL = 'search:index'
 SOCIALACCOUNT_PROVIDERS = \
     {'facebook':
      {'METHOD': 'oauth2',

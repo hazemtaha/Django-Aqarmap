@@ -4,6 +4,7 @@ from django.http import HttpRequest, HttpResponse, Http404
 from django.shortcuts import redirect
 from properties.models import Properties
 from properties.forms import PropertiesForm
+from django.core.paginator import   Paginator ,EmptyPage, PageNotAnInteger
 from django.template import loader
 
 import urlparse
@@ -18,8 +19,27 @@ def listProperties(request):
     # template = loader.get_template('listProperties.html')
 
     p = Properties.objects.filter(owner_id=request.user.id)
-    context = {'p': p}
-    return render(request, "listProperties.html", context)
+    paginator = Paginator(p,1)
+
+    page = request.GET.get('page')
+    try:
+        contacts = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        contacts = paginator.page(1)
+    except EmptyPage:
+      # If page is out of range (e.g. 9999), deliver last page of results.
+      contacts = paginator.page(paginator.num_pages)
+
+
+    return render(request, 'listProperties.html', {'contacts': contacts})
+
+
+    #context = {'p': p}
+
+    #return render(request, "listProperties.html", context)
+
+
 
 
 def EditProp(request, prop_id):
