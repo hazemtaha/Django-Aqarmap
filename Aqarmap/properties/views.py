@@ -62,7 +62,7 @@ def list_u_prop(request):
         prop_photos = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop')
             
         #Dealing with the paginators>>>>>>>>>>>>>>>>>>>>>>>
-        paginator = Paginator(prop_photos, 1) # show 3 property per page
+        paginator = Paginator(prop_photos, 3) # show 3 property per page
         page = request.GET.get('page')
 
         try: 
