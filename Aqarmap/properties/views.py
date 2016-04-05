@@ -2,11 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpRequest, HttpResponse, Http404
 from django.core.exceptions import ValidationError
 from .models import Properties, PropertiesPhotos
-<<<<<<< HEAD
-=======
 from django.contrib.auth.decorators import login_required
 
->>>>>>> db600f5387db918afcbd4f1365a866bd912a0727
 from django.template import loader
 # import the forms here
 from django.forms import inlineformset_factory, BaseInlineFormSet
@@ -62,11 +59,10 @@ def list_u_prop(request):
 
     try:
         property_info = Properties.objects.all()
-<<<<<<< HEAD
-        prop_photos = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop').first()
+        prop_photos = PropertiesPhotos.objects.filter(prop__in=property_info).select_related('prop')
             
         #Dealing with the paginators>>>>>>>>>>>>>>>>>>>>>>>
-        paginator = Paginator(property_info, 4) # show 3 property per page
+        paginator = Paginator(prop_photos, 1) # show 3 property per page
         page = request.GET.get('page')
 
         try: 
@@ -81,12 +77,8 @@ def list_u_prop(request):
 
         #End of paginator>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         context = {'property_info': property_info,'prop_photos':prop_photos,'props_pagin':props_pagin,}
-=======
-        prop_photos = PropertiesPhotos.objects.filter(
-            prop__in=property_info).select_related('prop').first()
-        context = {'property_info': property_info,
-                   'prop_photos': prop_photos, }
->>>>>>> db600f5387db918afcbd4f1365a866bd912a0727
+        
+
     except Properties.DoesNotExist:
         return HttpResponse("There is no property to show")
 
