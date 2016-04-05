@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse, Http404
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Subscribtions
 from properties.models import Properties, PropertiesPhotos
 from django.db.models import Q
@@ -85,9 +86,16 @@ def sub_results(request):
        # continue
         #else:
         subs.append(properties)
-        print(properties.__dict__)
+    paginator = Paginator(subs, 1)
+    page = request.GET.get('page')
+    try:
+        props = paginator.page(page)
+    except PageNotAnInteger:
+        props = paginator.page(1)
+    except EmptyPage:
+        props = paginator.page(paginator.num_pages)
     template = loader.get_template('results.html')
-    context = {'subs':subs,}
+    context = {'subs':props,}
     #print(subs[0].values('id'))
     return HttpResponse(template.render(context, request))
 

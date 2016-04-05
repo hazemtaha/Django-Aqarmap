@@ -32,5 +32,20 @@
     {% endfor %}
 
 
-{% endblock content %}
 </div>
+<div class="pagination">
+    <span class="step-links">
+        {% if subs.has_previous %}
+            <a href="?page={{ subs.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ subs.number }} of {{ subs.paginator.num_pages }}.
+        </span>
+
+        {% if subs.has_next %}
+            <a href="?page={{ subs.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock content %}
