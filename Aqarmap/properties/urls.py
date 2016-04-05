@@ -4,7 +4,7 @@ from . import views
 app_name = 'properties'
 
 urlpatterns = [
-    url(r'^add/$', views.addProperty, name='addproperty'),
+    url(r'^add/$', views.add_property, name='addproperty'),
     url(r'^forsale/$', views.prop_forSale, name='propertiesforsale'),
     url(r'^forrent/$', views.prop_forRent, name='propertiesforrent'),
     url(r'^all/$', views.list_u_prop, name='allproperties'),

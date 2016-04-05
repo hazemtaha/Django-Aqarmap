@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 from search.forms import SearchForm
 from properties.models import Properties, PropertiesPhotos, PROPERTIES_TYPES
 # Create your views here.
@@ -45,6 +46,7 @@ def search_results(request):
         return render(request, "search/results.html", context)
 
 
+@login_required
 def property_compare(request, first_prop, second_prop):
     results = Properties.objects.filter(Q(id=first_prop) | Q(id=second_prop))
     # this will get all properties that have an image

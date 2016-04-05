@@ -24,13 +24,14 @@ PROPERTIES_CATEGORIES = (
     ('r', 'For Rent'),
 )
 STATUS = (
-	(True,'Active'),
-	(False,'InActive'),
+    (True, 'Active'),
+    (False, 'InActive'),
 )
+
 
 class Properties(TimeStampedModel):
     title = models.CharField(max_length=255)
-    status = models.BooleanField(default=False)
+    status = models.BooleanField(default=True)
     prop_type = models.CharField(max_length=20, choices=PROPERTIES_TYPES)
     city = models.ForeignKey(Region)
     neighborhood = models.ForeignKey(City)
